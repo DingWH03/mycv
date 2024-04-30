@@ -20,90 +20,90 @@ import {
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
-  name: "丁伟豪",
+  name: "Bartosz Jarocki",
   initials: "BJ",
-  location: "安徽省合肥市",
-  locationLink: "https://zh.wikipedia.org/wiki/%E5%90%88%E8%82%A5%E5%B8%82",
+  location: "Wrocław, Poland, CET",
+  locationLink: "https://www.google.com/maps/place/Wrocław",
   about:
-    "一个热爱编程、热爱linux的在校大学生。",
+    "Full Stack Engineer focused on building products with extra attention to detail",
   summary:
-    "我就读于合肥工业大学计算机科学与技术专业。对操作系统和嵌入式设备有浓厚兴趣，有c++/rust/python/java等编程语言基础，熟悉linux，在学习系统编程，参加过计算机图形学实验室，开展过深度学习方面的的学习和研究。我热爱编程，对计算机有深厚兴趣，广泛学习，乐观向上，热爱尝试新事物，热爱实践并不断提升动手能力。",
+    "As a Full Stack Engineer, I have successfully taken multiple products from 0 to 1. I lead teams effectively, ensuring an environment where people can do their best work. Currently, I work mostly with TypeScript, React, Node.js, and GraphQL. I have over 8 years of experience in working remotely with companies all around the world.",
   avatarUrl: "https://avatars.githubusercontent.com/u/1017620?v=4",
-  personalWebsiteUrl: "https://me.cxhao.top",
+  personalWebsiteUrl: "https://jarocki.me",
   contact: {
-    email: "dingwh2023@126.com",
-    tel: "+8615556183656",
+    email: "bartosz.jarocki@hey.com",
+    tel: "+48530213401",
     social: [
       {
         name: "GitHub",
-        url: "https://github.com/DingWH03",
+        url: "https://github.com/BartoszJarocki",
         icon: GitHubIcon,
       },
-      // {
-      //   name: "LinkedIn",
-      //   url: "https://www.linkedin.com/in/bjarocki/",
-      //   icon: LinkedInIcon,
-      // },
-      // {
-      //   name: "X",
-      //   url: "https://x.com/BartoszJarocki",
-      //   icon: XIcon,
-      // },
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/bjarocki/",
+        icon: LinkedInIcon,
+      },
+      {
+        name: "X",
+        url: "https://x.com/BartoszJarocki",
+        icon: XIcon,
+      },
     ],
   },
   education: [
     {
-      school: "合肥工业大学",
-      degree: "本科生",
-      start: "2022",
-      end: "2026",
+      school: "Wrocław University of Technology",
+      degree: "Bachelor's Degree in Control systems engineering and Robotics",
+      start: "2007",
+      end: "2010",
     },
   ],
-  // work: [
-  //   {
-  //     company: "Parabol",
-  //     link: "https://parabol.co",
-  //     badges: ["Remote"],
-  //     title: "Senior Full Stack Developer",
-  //     logo: ParabolLogo,
-  //     start: "2021",
-  //     end: "2024",
-  //     description:
-  //       "Implemented new features, led squad, worked on improving the way developers ship the code, started migration from Emotion to Tailwind CSS and more. Technologies: React, TypeScript, GraphQL",
-  //   },
-  //   {
-  //     company: "Clevertech",
-  //     link: "https://clevertech.biz",
-  //     badges: ["Remote"],
-  //     title: "Lead Android Developer → Full Stack Developer",
-  //     logo: ClevertechLogo,
-  //     start: "2015",
-  //     end: "2021",
-  //     description:
-  //       "Created Android mobile apps and led teams for companies like Vision Media, DKMS, or AAA. Built live streaming application for Evercast from scratch. Technologies: Android, Kotlin, React, TypeScript, GraphQL",
-  //   },
-  //   {
-  //     company: "Jojo Mobile",
-  //     link: "https://bsgroup.eu/",
-  //     badges: [],
-  //     title: "Android Developer → Lead Android Developer",
-  //     logo: JojoMobileLogo,
-  //     start: "2012",
-  //     end: "2015",
-  //     description:
-  //       "Built an Android team, created Android apps for biggest Polish companies like LOT, Polskie Radio, Agora, PolskaPress",
-  //   },
-  //   {
-  //     company: "Nokia Siemens Networks",
-  //     link: "https://www.nokia.com",
-  //     badges: [],
-  //     title: "C/C++ Developer",
-  //     logo: NSNLogo,
-  //     start: "2010",
-  //     end: "2012",
-  //     description: "Creating and testing software for LTE base stations",
-  //   },
-  // ],
+  work: [
+    {
+      company: "Parabol",
+      link: "https://parabol.co",
+      badges: ["Remote"],
+      title: "Senior Full Stack Developer",
+      logo: ParabolLogo,
+      start: "2021",
+      end: "2024",
+      description:
+        "Implemented new features, led squad, worked on improving the way developers ship the code, started migration from Emotion to Tailwind CSS and more. Technologies: React, TypeScript, GraphQL",
+    },
+    {
+      company: "Clevertech",
+      link: "https://clevertech.biz",
+      badges: ["Remote"],
+      title: "Lead Android Developer → Full Stack Developer",
+      logo: ClevertechLogo,
+      start: "2015",
+      end: "2021",
+      description:
+        "Created Android mobile apps and led teams for companies like Vision Media, DKMS, or AAA. Built live streaming application for Evercast from scratch. Technologies: Android, Kotlin, React, TypeScript, GraphQL",
+    },
+    {
+      company: "Jojo Mobile",
+      link: "https://bsgroup.eu/",
+      badges: [],
+      title: "Android Developer → Lead Android Developer",
+      logo: JojoMobileLogo,
+      start: "2012",
+      end: "2015",
+      description:
+        "Built an Android team, created Android apps for biggest Polish companies like LOT, Polskie Radio, Agora, PolskaPress",
+    },
+    {
+      company: "Nokia Siemens Networks",
+      link: "https://www.nokia.com",
+      badges: [],
+      title: "C/C++ Developer",
+      logo: NSNLogo,
+      start: "2010",
+      end: "2012",
+      description: "Creating and testing software for LTE base stations",
+    },
+  ],
   skills: [
     "JavaScript",
     "TypeScript",
