@@ -111,6 +111,7 @@ export const RESUME_DATA = {
     "Java",
     "SQL",
     "Shell",
+    "Git",
     // "WebRTC",
   ],
   projects: [
