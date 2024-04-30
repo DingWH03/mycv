@@ -60,17 +60,17 @@ export const RESUME_DATA = {
     },
   ],
   work: [
-    // {
-    //   company: "Parabol",
-    //   link: "https://parabol.co",
-    //   badges: ["Remote"],
-    //   title: "Senior Full Stack Developer",
-    //   logo: ParabolLogo,
-    //   start: "2021",
-    //   end: "2024",
-    //   description:
-    //     "Implemented new features, led squad, worked on improving the way developers ship the code, started migration from Emotion to Tailwind CSS and more. Technologies: React, TypeScript, GraphQL",
-    // },
+    {
+      company: "暂无工作经历",
+      link: "https://mycv.cxhap.top/",
+      badges: ["?"],
+      title: "暂无职位",
+      logo: ParabolLogo,
+      start: "?",
+      end: "?",
+      description:
+        "暂无工作与实习经历。",
+    },
     // {
     //   company: "Clevertech",
     //   link: "https://clevertech.biz",
@@ -114,23 +114,23 @@ export const RESUME_DATA = {
     // "WebRTC",
   ],
   projects: [
-    // {
-    //   title: "Consultly",
-    //   techStack: [
-    //     "Side Project",
-    //     "TypeScript",
-    //     "Next.js",
-    //     "Vite",
-    //     "GraphQL",
-    //     "WebRTC",
-    //   ],
-    //   description: "A platform to build and grow your online business",
-    //   logo: ConsultlyLogo,
-    //   link: {
-    //     label: "consultly.com",
-    //     href: "https://consultly.com/",
-    //   },
-    // },
+    {
+      title: "电子词典",
+      techStack: [
+        "C++",
+        "Qt",
+        "B+ Tree",
+        "Trie Tree",
+        // "GraphQL",
+        // "WebRTC",
+      ],
+      description: "利用结巴分词实现单词翻译查找，利用 TrieTree 与 BPlusTree 实现英文查找",
+      logo: ConsultlyLogo,
+      link: {
+        label: "Qt-E-dict",
+        href: "https://github.com/DingWH03/Qt-E-dict",
+      },
+    },
     // {
     //   title: "Monito",
     //   techStack: ["Side Project", "TypeScript", "Next.js", "Browser Extension"],
