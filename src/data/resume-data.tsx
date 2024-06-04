@@ -21,14 +21,14 @@ import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
   name: "丁伟豪",
-  initials: "BJ",
+  initials: "DWH",
   location: "安徽省合肥市",
   locationLink: "https://zh.wikipedia.org/wiki/%E5%90%88%E8%82%A5%E5%B8%82",
   about:
     "一个热爱编程、热爱linux的在校大学生。",
   summary:
     "我就读于合肥工业大学计算机科学与技术专业。对操作系统和嵌入式设备有浓厚兴趣，有c++/rust/python/java等编程语言基础，熟悉linux，参加过计算机图形学实验室，开展过深度学习方面的的学习和研究。我热爱编程，对计算机有深厚兴趣，广泛学习，乐观向上，热爱尝试新事物，热爱实践并不断提升动手能力。",
-  avatarUrl: "https://raw.githubusercontent.com/DingWH03/mycv/main/src/images/avatar.png",
+  avatarUrl: "/images/avatar.png",
   personalWebsiteUrl: "https://me.cxhao.top",
   contact: {
     email: "dingwh2023@126.com",
