@@ -105,14 +105,13 @@ export const RESUME_DATA = {
     // },
   ],
   skills: [
-    "C/C++",
-    "Rust",
-    "Python",
-    "Java",
-    "SQL",
-    "Shell",
-    "Git",
-    // "WebRTC",
+    { name: "C/C++", level: 90 },
+    { name: "Rust", level: 80 },
+    { name: "Python", level: 95 },
+    { name: "Java", level: 85 },
+    { name: "SQL", level: 75 },
+    { name: "Shell", level: 70 },
+    { name: "Git", level: 88 },
   ],
   projects: [
     {

@@ -160,12 +160,23 @@ export default function Page() {
         </Section>
         <Section>
           <h2 className="text-xl font-bold">个人技能</h2>
-          <div className="flex flex-wrap gap-1">
+          <div className="flex flex-col gap-2">
             {RESUME_DATA.skills.map((skill) => {
-              return <Badge key={skill}>{skill}</Badge>;
+              return (
+                <div key={skill.name} className="flex items-center gap-2">
+                  <span className="w-1/4">{skill.name}</span>
+                  <div className="w-3/4">
+                    <div className="w-full bg-gray-200 rounded-full h-2.5">
+                      <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: `${skill.level}%` }}></div>
+                    </div>
+                  </div>
+                  <span className="ml-2">{skill.level}%</span>
+                </div>
+              );
             })}
           </div>
         </Section>
+
 
         <Section className="print-force-new-page scroll-mb-16">
           <h2 className="text-xl font-bold">个人项目</h2>
