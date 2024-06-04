@@ -105,11 +105,12 @@ export const RESUME_DATA = {
     // },
   ],
   skills: [
-    { name: "Linux", level: 60 },
+    { name: "Linux", level: 70 },
     { name: "C/C++", level: 70 },
     { name: "Rust", level: 60 },
     { name: "Python", level: 75 },
     { name: "Java", level: 60 },
+    { name: "Qt/PyQt", level: 70 },
     { name: "SQL", level: 70 },
     { name: "Shell", level: 70 },
     { name: "Git", level: 70 },
