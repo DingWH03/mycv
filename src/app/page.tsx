@@ -167,7 +167,7 @@ export default function Page() {
                   <span className="w-1/4">{skill.name}</span>
                   <div className="w-3/4">
                     <div className="w-full bg-gray-200 rounded-full h-2.5">
-                      <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: `${skill.level}%` }}></div>
+                      <div className="bg-red-600 h-2.5 rounded-full" style={{ width: `${skill.level}%` }}></div>
                     </div>
                   </div>
                   <span className="ml-2">{skill.level}%</span>
