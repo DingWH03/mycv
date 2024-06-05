@@ -133,6 +133,40 @@ export const RESUME_DATA = {
         href: "https://github.com/DingWH03/Qt-E-dict",
       },
     },
+    {
+      title: "音乐播放器",
+      techStack: [
+        "Python",
+        "PyQt",
+        // "B+ Tree",
+        // "Trie Tree",
+        // "GraphQL",
+        // "WebRTC",
+      ],
+      description: "一个pyside6开发的网易云音乐第三方客户端，使用了NeteaseCloudMusic_PythonSDK，HFUT Python语言与系统设计课程大作业",
+      logo: ConsultlyLogo,
+      link: {
+        label: "Xiximusic",
+        href: "https://github.com/DingWH03/Xiximusic",
+      },
+    },
+    {
+      title: "词法分析器",
+      techStack: [
+        "Rust",
+        "有限状态自动机",
+        // "B+ Tree",
+        // "Trie Tree",
+        // "GraphQL",
+        // "WebRTC",
+      ],
+      description: "HFUT编译原理课程实验词法分析器，使用rust语言编写，输出自定义的枚举类型，目前可处理绝大多数语句",
+      logo: ConsultlyLogo,
+      link: {
+        label: "Lexer",
+        href: "https://github.com/DingWH03/lexer",
+      },
+    },
     // {
     //   title: "Monito",
     //   techStack: ["Side Project", "TypeScript", "Next.js", "Browser Extension"],
