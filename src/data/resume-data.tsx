@@ -67,11 +67,20 @@ export const RESUME_DATA = {
   campusActivities: [
     {
       organization: '校学业发展中心',
+      department: '',
+      topic: '',
+      position: '',
+      start: '2022-08',
+      end: '2023-12',
+      description: '参与图像去除多种退化方式的学习和研究。'
+    },
+    {
+      organization: '计算机学院多媒体实验室',
       department: '学业发展服务队',
       topic: '',
       position: '干事',
-      start: '2022-08',
-      end: '2023-12',
+      start: '2023-08',
+      end: '2026-06?',
       description: '负责协同开展学业帮扶活动，并且参与办公室值班。'
     },
     // {
