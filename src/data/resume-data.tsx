@@ -16,7 +16,6 @@ import {
   ParabolLogo,
   TastyCloudLogo,
   YearProgressLogo,
-  QQLogo,
 } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
@@ -35,11 +34,11 @@ export const RESUME_DATA = {
     email: "dingwh2023@126.com",
     tel: "+8615556183656",
     social: [
-      {
-        name: "QQ",
-        url: "https://qm.qq.com/q/uKtRSqdDI6",
-        icon: QQLogo,
-      },
+      // {
+      //   name: "QQ",
+      //   url: "https://qm.qq.com/q/uKtRSqdDI6",
+      //   icon: QQLogo,
+      // },
       {
         name: "GitHub",
         url: "https://github.com/DingWH03",
