@@ -64,6 +64,25 @@ export const RESUME_DATA = {
       end: "2026",
     },
   ],
+  campusActivities: [
+    {
+      organization: '校学业发展中心',
+      department: '学业发展服务队',
+      topic: '',
+      position: '干事',
+      start: '2022-08',
+      end: '2023-12',
+      description: '负责协同开展学业帮扶活动，并且参与办公室值班。'
+    },
+    // {
+    //   organization: '大创项目',
+    //   position: '项目负责人',
+    //   start: '2020-01',
+    //   end: '2020-12',
+    //   description: '领导团队进行创新项目研究，负责项目规划与实施，获得省级优秀项目奖。'
+    // },
+    // 其他在校经历
+  ],
   work: [
     {
       company: "暂无工作经历",

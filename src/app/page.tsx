@@ -98,66 +98,7 @@ export default function Page() {
             {RESUME_DATA.summary}
           </p>
         </Section>
-        <Section>
-          <h2 className="text-xl font-bold">工作经历</h2>
-          {RESUME_DATA.work.map((work) => {
-            return (
-              <Card key={work.company}>
-                <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                      <a className="hover:underline" href={work.link}>
-                        {work.company}
-                      </a>
 
-                      <span className="inline-flex gap-x-1">
-                        {work.badges.map((badge) => (
-                          <Badge
-                            variant="secondary"
-                            className="align-middle text-xs"
-                            key={badge}
-                          >
-                            {badge}
-                          </Badge>
-                        ))}
-                      </span>
-                    </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
-                      {work.start} - {work.end ?? "Present"}
-                    </div>
-                  </div>
-
-                  <h4 className="font-mono text-sm leading-none">
-                    {work.title}
-                  </h4>
-                </CardHeader>
-                <CardContent className="mt-2 text-xs">
-                  {work.description}
-                </CardContent>
-              </Card>
-            );
-          })}
-        </Section>
-        <Section>
-          <h2 className="text-xl font-bold">教育经历</h2>
-          {RESUME_DATA.education.map((education) => {
-            return (
-              <Card key={education.school}>
-                <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="font-semibold leading-none">
-                      {education.school}
-                    </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
-                      {education.start} - {education.end}
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent className="mt-2">{education.degree}</CardContent>
-              </Card>
-            );
-          })}
-        </Section>
         <Section>
           <h2 className="text-xl font-bold">个人技能</h2>
           <div className="flex flex-col gap-2">
@@ -210,6 +151,99 @@ export default function Page() {
           </div>
         </Section>
       </section>
+
+      <Section>
+        <h2 className="text-xl font-bold">教育经历</h2>
+        {RESUME_DATA.education.map((education) => {
+          return (
+            <Card key={education.school}>
+              <CardHeader>
+                <div className="flex items-center justify-between gap-x-2 text-base">
+                  <h3 className="font-semibold leading-none">
+                    {education.school}
+                  </h3>
+                  <div className="text-sm tabular-nums text-gray-500">
+                    {education.start} - {education.end}
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent className="mt-2">{education.degree}</CardContent>
+            </Card>
+          );
+        })}
+      </Section>
+
+      <Section>
+        <h2 className="text-xl font-bold">在校经历</h2>
+        {RESUME_DATA.campusActivities.map((activity) => {
+          return (
+            <Card key={activity.organization}>
+              <CardHeader>
+                <div className="flex items-center justify-between gap-x-2 text-base">
+                  <h3 className="font-semibold leading-none">
+                    {activity.organization}
+                  </h3>
+                  <div className="text-sm tabular-nums text-gray-500">
+                    {activity.start} - {activity.end}
+                  </div>
+                </div>
+                <h4 className="font-mono text-sm leading-none">{activity.position}</h4>
+                {activity.department && (
+                  <h5 className="text-sm leading-none text-gray-500">{activity.department}</h5>
+                )}
+                {activity.topic && (
+                  <h5 className="text-sm leading-none text-gray-500">{activity.topic}</h5>
+                )}
+              </CardHeader>
+              <CardContent className="mt-2 text-xs">{activity.description}</CardContent>
+            </Card>
+          );
+        })}
+      </Section>
+
+
+
+      <Section>
+        <h2 className="text-xl font-bold">工作经历</h2>
+        {RESUME_DATA.work.map((work) => {
+          return (
+            <Card key={work.company}>
+              <CardHeader>
+                <div className="flex items-center justify-between gap-x-2 text-base">
+                  <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                    <a className="hover:underline" href={work.link}>
+                      {work.company}
+                    </a>
+
+                    <span className="inline-flex gap-x-1">
+                      {work.badges.map((badge) => (
+                        <Badge
+                          variant="secondary"
+                          className="align-middle text-xs"
+                          key={badge}
+                        >
+                          {badge}
+                        </Badge>
+                      ))}
+                    </span>
+                  </h3>
+                  <div className="text-sm tabular-nums text-gray-500">
+                    {work.start} - {work.end ?? "Present"}
+                  </div>
+                </div>
+
+                <h4 className="font-mono text-sm leading-none">
+                  {work.title}
+                </h4>
+              </CardHeader>
+              <CardContent className="mt-2 text-xs">
+                {work.description}
+              </CardContent>
+            </Card>
+          );
+        })}
+      </Section>
+
 
       <CommandMenu
         links={[
