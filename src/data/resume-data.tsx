@@ -120,6 +120,11 @@ export const RESUME_DATA = {
     { name: "Shell", level: 70 },
     { name: "Git", level: 70 },
   ],
+  certifications: [
+    { name: 'CET-6', issuer: 'Ministry of Education, PRC', date: '2023-12' },
+    // { name: 'AWS Certified Solutions Architect', issuer: 'Amazon', date: '2021-11' },
+    // 其他证书
+  ],
   projects: [
     {
       title: "电子词典",

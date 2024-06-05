@@ -176,6 +176,21 @@ export default function Page() {
             })}
           </div>
         </Section>
+        <Section>
+          <h2 className="text-xl font-bold">个人技能证书</h2>
+          <div className="flex flex-col gap-2">
+            {RESUME_DATA.certifications.map((certification) => {
+              return (
+                <div key={certification.name} className="flex items-center justify-between gap-2">
+                  <span className="w-1/2 font-semibold">{certification.name}</span>
+                  <span className="text-sm text-gray-500">{certification.issuer}</span>
+                  <span className="text-sm tabular-nums text-gray-500">{certification.date}</span>
+                </div>
+              );
+            })}
+          </div>
+        </Section>
+
 
 
         <Section className="print-force-new-page scroll-mb-16">
