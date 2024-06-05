@@ -98,7 +98,6 @@ export default function Page() {
             {RESUME_DATA.summary}
           </p>
         </Section>
-
         <Section>
           <h2 className="text-xl font-bold">个人技能</h2>
           <div className="flex flex-col gap-2">
@@ -131,9 +130,7 @@ export default function Page() {
             })}
           </div>
         </Section>
-
-
-
+        {/* 在这里控制打印时强制换行 */}
         <Section className="print-force-new-page scroll-mb-16">
           <h2 className="text-xl font-bold">个人项目</h2>
           <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
