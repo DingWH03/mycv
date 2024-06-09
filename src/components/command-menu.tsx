@@ -17,15 +17,10 @@ import { CommandIcon } from "lucide-react";
 interface Props {
   links: { url: string; title: string }[];
   language: string;
-  setLanguage: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export const CommandMenu = ({ links, language ,setLanguage}: Props) => {
+export const CommandMenu = ({ links, language}: Props) => {
   const [open, setOpen] = React.useState(false);
-  
-  const handleToggleLanguage = () => {
-    setLanguage(language === 'ch' ? 'en' : 'ch');
-  };
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -72,7 +67,7 @@ export const CommandMenu = ({ links, language ,setLanguage}: Props) => {
             <CommandItem
               onSelect={() => {
                 setOpen(false);
-                handleToggleLanguage(); // 执行切换语言函数
+                //handleToggleLanguage(); // 执行切换语言函数
               }}
             >
               <span>Switch To {language === 'ch' ? 'English' : 'Chinese'}</span>

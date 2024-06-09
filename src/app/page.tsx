@@ -1,4 +1,3 @@
-"use client";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -10,21 +9,20 @@ import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { RESUME_DATA_en } from "@/data/resume-data_en";
 import { ProjectCard } from "@/components/project-card";
-import React, { useState } from 'react';
 
-
-
-export default function Page() {
-  // 定义语言标识变量，默认为 'ch'
-  const [language, setLanguage] = useState('ch');
+// 定义语言标识变量，默认为 'ch'
+let language = 'ch';
 
 // 根据语言选择数据
 const data = language === 'ch' ? RESUME_DATA : RESUME_DATA_en;
 
-const metadata: Metadata = {
+export const metadata: Metadata = {
   title: `${data.name} | ${data.about}`,
   description: data.summary,
 };
+
+export default function Page() {
+  
 
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
@@ -280,7 +278,6 @@ const metadata: Metadata = {
           })),
         ]} 
         language={language} 
-        setLanguage={setLanguage}
       />
     </main>
   );
