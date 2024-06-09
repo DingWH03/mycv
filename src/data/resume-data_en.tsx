@@ -19,15 +19,15 @@ import {
 } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon, XIcon, QQIcon } from "@/components/icons";
 
-export const RESUME_DATA = {
-  name: "丁伟豪",
+export const RESUME_DATA_en = {
+  name: "Ding Weihao",
   initials: "DWH",
-  location: "安徽省合肥市",
-  locationLink: "https://zh.wikipedia.org/wiki/%E5%90%88%E8%82%A5%E5%B8%82",
+  location: "Hefei, Anhui Province",
+  locationLink: "https://en.wikipedia.org/wiki/Hefei",
   about:
-    "一个热爱编程、热爱linux的在校大学生。",
+    "A university student who loves programming and Linux.",
   summary:
-    "我就读于合肥工业大学计算机科学与技术专业。对操作系统和嵌入式设备有浓厚兴趣，有c++/rust/python/java等编程语言基础，熟悉linux，参加过计算机图形学实验室，开展过深度学习方面的的学习和研究。我热爱编程，对计算机有深厚兴趣，广泛学习，乐观向上，热爱尝试新事物，热爱实践并不断提升动手能力。",
+    "I am majoring in Computer Science and Technology at Hefei University of Technology. I have a strong interest in operating systems and embedded devices, with a foundation in programming languages such as C++, Rust, Python, and Java. Proficient in Linux, I have participated in the Computer Graphics Laboratory and conducted research and study in deep learning. I am passionate about programming, have a deep interest in computers, enjoy learning widely, am optimistic, love trying new things, and constantly strive to improve my hands-on abilities.",
   avatarUrl: "/images/avatar.png",
   personalWebsiteUrl: "https://me.cxhao.top",
   contact: {
@@ -58,30 +58,30 @@ export const RESUME_DATA = {
   },
   education: [
     {
-      school: "合肥工业大学",
-      degree: "本科生",
+      school: "Hefei University of Technology",
+      degree: "Undergraduate",
       start: "2022",
       end: "2026",
     },
   ],
   campusActivities: [
     {
-      organization: '计算机学院多媒体实验室',
+      organization: 'Multimedia Laboratory, School of Computer Science',
       department: '',
       topic: '',
       position: '',
       start: '2023-08',
       end: '2026-06?',
-      description: '参与图像去除多种退化方式的学习和研究。'
+      description: 'Participated in learning and research on various degradation methods for image restoration.'
     },
     {
-      organization: '校学业发展中心',
-      department: '学业发展服务队',
+      organization: 'School Academic Development Center',
+      department: 'Academic Development Service Team',
       topic: '',
-      position: '干事',
+      position: 'Staff',
       start: '2022-08',
       end: '2023-12',
-      description: '负责协同开展学业帮扶活动，并且参与办公室值班。'
+      description: 'Responsible for coordinating academic assistance activities and participating in office duty.'
     },
     // {
     //   organization: '大创项目',
@@ -90,19 +90,19 @@ export const RESUME_DATA = {
     //   end: '2020-12',
     //   description: '领导团队进行创新项目研究，负责项目规划与实施，获得省级优秀项目奖。'
     // },
-    // 其他在校经历
+    // Other campus activities
   ],
   work: [
     {
-      company: "暂无工作经历",
+      company: "No work experience yet",
       link: "https://mycv.cxhap.top/",
       badges: ["?"],
-      title: "暂无职位",
+      title: "No position yet",
       logo: ParabolLogo,
       start: "?",
       end: "?",
       description:
-        "暂无工作与实习经历。",
+        "No work or internship experience yet.",
     },
     // {
     //   company: "Clevertech",
@@ -151,11 +151,11 @@ export const RESUME_DATA = {
   certifications: [
     { name: 'CET-6', issuer: 'Ministry of Education, PRC', date: '2023-12' },
     // { name: 'AWS Certified Solutions Architect', issuer: 'Amazon', date: '2021-11' },
-    // 其他证书
+    // Other certifications
   ],
   projects: [
     {
-      title: "电子词典",
+      title: "Electronic Dictionary",
       techStack: [
         "C++",
         "Qt",
@@ -164,7 +164,7 @@ export const RESUME_DATA = {
         // "GraphQL",
         // "WebRTC",
       ],
-      description: "利用结巴分词实现单词翻译查找，利用 TrieTree 与 BPlusTree 实现英文查找",
+      description: "Utilizes Jieba word segmentation for word translation lookup, and TrieTree and BPlusTree for English lookup.",
       logo: ConsultlyLogo,
       link: {
         label: "Qt-E-dict",
@@ -172,7 +172,7 @@ export const RESUME_DATA = {
       },
     },
     {
-      title: "音乐播放器",
+      title: "Music Player",
       techStack: [
         "Python",
         "PyQt",
@@ -181,7 +181,7 @@ export const RESUME_DATA = {
         // "GraphQL",
         // "WebRTC",
       ],
-      description: "一个pyside6开发的网易云音乐第三方客户端，使用了NeteaseCloudMusic_PythonSDK，HFUT Python语言与系统设计课程大作业",
+      description: "A PySide6-developed NeteaseCloudMusic third-party client that uses the NeteaseCloudMusic_PythonSDK, HFUT Python Language and System Design Course Project",
       logo: ConsultlyLogo,
       link: {
         label: "Xiximusic",
@@ -189,21 +189,21 @@ export const RESUME_DATA = {
       },
     },
     {
-      title: "词法分析器",
+      title: "Lexer",
       techStack: [
         "Rust",
-        "有限状态自动机",
-        // "B+ Tree",
-        // "Trie Tree",
-        // "GraphQL",
-        // "WebRTC",
-      ],
-      description: "HFUT编译原理课程实验词法分析器，使用rust语言编写，输出自定义的枚举类型，目前可处理绝大多数语句",
-      logo: ConsultlyLogo,
-      link: {
-        label: "Lexer",
-        href: "https://github.com/DingWH03/lexer",
-      },
-    },
-  ],
+        "Finite State Automaton",
+// "B+ Tree",
+// "Trie Tree",
+// "GraphQL",
+// "WebRTC",
+],
+description: "Lexer for HFUT Compiler Principles course experiment, written in Rust, outputting custom enumeration types, currently capable of handling most statements.",
+logo: ConsultlyLogo,
+link: {
+label: "Lexer",
+href: "https://github.com/DingWH03/lexer",
+},
+},
+],
 } as const;
