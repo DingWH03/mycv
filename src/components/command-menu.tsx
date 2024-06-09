@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useRouter } from 'next/navigation';
 
 import {
   CommandDialog,
@@ -19,8 +20,9 @@ interface Props {
   language: string;
 }
 
-export const CommandMenu = ({ links, language}: Props) => {
+export const CommandMenu = ({ links, language }: Props) => {
   const [open, setOpen] = React.useState(false);
+  const router = useRouter();
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -67,6 +69,8 @@ export const CommandMenu = ({ links, language}: Props) => {
             <CommandItem
               onSelect={() => {
                 setOpen(false);
+                const newLanguagePath = language === 'ch' ? '/en' : '/';
+                router.push(newLanguagePath);
                 //handleToggleLanguage(); // 执行切换语言函数
               }}
             >
