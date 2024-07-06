@@ -15,7 +15,7 @@ interface PageProps {
 
 export default function Page({ language }: PageProps) {
   // 根据语言选择数据
-const data = language === 'ch' ? RESUME_DATA : RESUME_DATA_en;
+  const data = language === 'ch' ? RESUME_DATA : RESUME_DATA_en;
 
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
@@ -106,7 +106,7 @@ const data = language === 'ch' ? RESUME_DATA : RESUME_DATA_en;
           <h2 className="text-xl font-bold">
             {language === 'ch' ? '个人技能' : 'Personal Skills'}
           </h2>
-          <div className="flex flex-col gap-2">
+          <div className="grid grid-cols-2 gap-2">
             {data.skills.map((skill) => {
               return (
                 <div key={skill.name} className="flex items-center gap-2">
@@ -122,6 +122,7 @@ const data = language === 'ch' ? RESUME_DATA : RESUME_DATA_en;
             })}
           </div>
         </Section>
+
         <Section>
           <h2 className="text-xl font-bold">
             {language === 'ch' ? '个人技能证书' : 'Personal Certifications'}
@@ -214,7 +215,7 @@ const data = language === 'ch' ? RESUME_DATA : RESUME_DATA_en;
 
         <Section>
           <h2 className="text-xl font-bold">
-          {language === 'ch' ? '工作经历' : 'Work Experience'}
+            {language === 'ch' ? '工作经历' : 'Work Experience'}
           </h2>
           {data.work.map((work) => {
             return (
@@ -269,8 +270,8 @@ const data = language === 'ch' ? RESUME_DATA : RESUME_DATA_en;
             url: socialMediaLink.url,
             title: socialMediaLink.name,
           })),
-        ]} 
-        language={language} 
+        ]}
+        language={language}
       />
     </main>
   );
