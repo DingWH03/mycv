@@ -27,7 +27,7 @@ export const RESUME_DATA_en = {
   about:
     "A university student who loves programming and Linux.",
   summary:
-    "I am majoring in Computer Science and Technology at Hefei University of Technology. I have a strong interest in operating systems and embedded devices, with a foundation in programming languages such as C++, Rust, Python, and Java. Proficient in Linux, I have participated in the Computer Graphics Laboratory and conducted research and study in deep learning. I am passionate about programming, have a deep interest in computers, enjoy learning widely, am optimistic, love trying new things, and constantly strive to improve my hands-on abilities.",
+    "Computer Science and Technology student at Hefei University of Technology, proficient in C++, Rust, Python, and Java programming, familiar with Linux systems. Participated in computer graphics lab projects with experience in deep learning research. Passionate about programming, optimistic, and focused on practical skills and hands-on experience.",
   avatarUrl: "/images/avatar.png",
   personalWebsiteUrl: "https://me.cxhao.top",
   contact: {

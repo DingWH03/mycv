@@ -27,7 +27,7 @@ export const RESUME_DATA = {
   about:
     "一个热爱编程、热爱linux的在校大学生。",
   summary:
-    "我就读于合肥工业大学计算机科学与技术专业。对操作系统和嵌入式设备有浓厚兴趣，有c++/rust/python/java等编程语言基础，熟悉linux，参加过计算机图形学实验室，开展过深度学习方面的的学习和研究。我热爱编程，对计算机有深厚兴趣，广泛学习，乐观向上，热爱尝试新事物，热爱实践并不断提升动手能力。",
+    "合肥工业大学计算机科学与技术专业学生，擅长C++、Rust、Python和Java编程，熟悉Linux系统。参与过计算机图形学实验室项目，有深度学习研究经验。热爱编程，积极乐观，注重实践和动手能力的提升。",
   avatarUrl: "/images/avatar.png",
   personalWebsiteUrl: "https://me.cxhao.top",
   contact: {
