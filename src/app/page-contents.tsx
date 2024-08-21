@@ -5,12 +5,21 @@ import { CommandMenu } from "@/components/command-menu";
 import { Section } from "@/components/ui/section";
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { RESUME_DATA } from "@/data/resume-data";
-import { RESUME_DATA_en } from "@/data/resume-data_en";
+import { RESUME_DATA, RESUME_DATA_en } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
 
 interface PageProps {
   language: string;
+}
+
+interface Skill {
+  name: string;
+  level: number;
+  category: string;
+}
+
+interface SkillsByCategory {
+  [key: string]: Skill[];
 }
 
 export default function Page({ language }: PageProps) {
@@ -103,25 +112,58 @@ export default function Page({ language }: PageProps) {
           </p>
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">
-            {language === 'ch' ? '个人技能' : 'Personal Skills'}
-          </h2>
-          <div className="grid grid-cols-2 gap-2">
-            {data.skills.map((skill) => {
-              return (
-                <div key={skill.name} className="flex items-center gap-2">
-                  <span className="w-1/4">{skill.name}</span>
-                  <div className="w-3/4">
-                    <div className="w-full bg-gray-200 rounded-full h-2.5">
-                      <div className="bg-red-600 h-2.5 rounded-full" style={{ width: `${skill.level}%` }}></div>
-                    </div>
-                  </div>
-                  <span className="ml-2">{skill.level}%</span>
+  <h2 className="text-xl font-bold">
+    {language === 'ch' ? '个人技能' : 'Personal Skills'}
+  </h2>
+  <div className="grid grid-cols-2 gap-4">
+    {Object.entries(data.skills.reduce<SkillsByCategory>((acc, skill) => {
+      // Group skills by category
+      if (!acc[skill.category]) {
+        acc[skill.category] = [];
+      }
+      acc[skill.category].push(skill);
+      return acc;
+    }, {})).map(([category, skills]) => (
+      <div key={category} className="col-span-1">
+        <h3 className="font-semibold">{category}</h3>
+        {skills.map((skill) => (
+          <div key={skill.name} className="flex items-center gap-2 mb-2">
+            {/* 设置技能名称的固定宽度 */}
+            <span className="w-1/4 text-left" style={{ minWidth: '80px' }}>
+              {skill.name}
+            </span>
+            <div className="relative w-3/4">
+              <div className="w-full bg-gray-200 rounded-full h-2.5 relative flex items-center">
+                <div
+                  className="bg-yellow-600 h-2.5 rounded-full flex items-center justify-center"
+                  style={{ width: `${skill.level}%` }}
+                >
+                  {/* 增大字体并上下居中对齐 */}
+                  <span
+                    className="absolute text-lg text-black"
+                    style={{
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      lineHeight: '1.5rem', // 确保文本上下居中
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    {skill.level}%
+                  </span>
                 </div>
-              );
-            })}
+              </div>
+            </div>
           </div>
-        </Section>
+        ))}
+      </div>
+    ))}
+  </div>
+</Section>
+
+
+
+
+
 
         <Section>
           <h2 className="text-xl font-bold">

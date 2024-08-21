@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { RESUME_DATA_en } from "@/data/resume-data_en";
+import { RESUME_DATA_en } from "@/data/resume-data";
 import Page from '@/app/page-contents';
 
 // 定义语言标识变量，默认为 'en'
