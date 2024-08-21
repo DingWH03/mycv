@@ -135,7 +135,7 @@ export default function Page({ language }: PageProps) {
             <div className="relative w-3/4">
               <div className="w-full bg-gray-200 rounded-full h-2.5 relative flex items-center">
                 <div
-                  className="bg-yellow-600 h-2.5 rounded-full flex items-center justify-center"
+                  className="bg-blue-400 h-2.5 rounded-full flex items-center justify-center"
                   style={{ width: `${skill.level}%` }}
                 >
                   {/* 增大字体并上下居中对齐 */}
