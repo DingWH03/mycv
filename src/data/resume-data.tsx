@@ -22,13 +22,16 @@ import { GitHubIcon, LinkedInIcon, XIcon, QQIcon } from "@/components/icons";
 export const RESUME_DATA = {
   name: "丁伟豪",
   initials: "DWH",
+  birthDate: "2003-05-10",
+  gender: "男",
+  top_education: "本科",
   location: "安徽省合肥市",
   locationLink: "https://zh.wikipedia.org/wiki/%E5%90%88%E8%82%A5%E5%B8%82",
   about:
     "一个热爱编程、热爱linux的在校大学生。",
   summary:
     "合肥工业大学计算机科学与技术专业学生，擅长C++、Rust、Python和Java编程，熟悉Linux系统。参与过计算机图形学实验室项目，有深度学习研究经验。热爱编程，积极乐观，注重实践和动手能力的提升。",
-  avatarUrl: "/images/avatar.png",
+  avatarUrl: "/images/avatar.jpg",
   personalWebsiteUrl: "https://me.cxhao.top",
   contact: {
     email: "dingwh2023@126.com",
@@ -50,6 +53,7 @@ export const RESUME_DATA = {
     {
       school: "合肥工业大学",
       degree: "本科生",
+      major: "计算机科学与技术",
       start: "2022",
       end: "2026",
     },
@@ -63,15 +67,6 @@ export const RESUME_DATA = {
       start: '2023-08',
       end: '2026-06?',
       description: '参与图像去除多种退化方式的学习和研究。'
-    },
-    {
-      organization: '校学业发展中心',
-      department: '学业发展服务队',
-      topic: '',
-      position: '干事',
-      start: '2022-08',
-      end: '2023-12',
-      description: '负责协同开展学业帮扶活动，并且参与办公室值班。'
     },
   ],
   work: [
@@ -88,24 +83,36 @@ export const RESUME_DATA = {
     },
   ],
   skills: [
-    { name: "C/C++", level: 70, category: "编程语言" },
-    { name: "Rust", level: 60, category: "编程语言" },
-    { name: "Python", level: 75, category: "编程语言" },
-    { name: "Java", level: 60, category: "编程语言" },
-    { name: "JavaScript", level: 65, category: "Web开发" },
-    { name: "React", level: 60, category: "Web开发" },
-    { name: "HTML/CSS", level: 70, category: "Web开发" },
-    { name: "Node.js", level: 60, category: "Web开发" },
-    { name: "Qt/PyQt", level: 70, category: "框架与库" },
-    { name: "SQL", level: 70, category: "数据库" },
-    { name: "Git", level: 70, category: "版本控制" },
-    { name: "Docker", level: 65, category: "DevOps与工具" },
-    { name: "Kubernetes", level: 60, category: "DevOps与工具" },
-    { name: "Linux运维", level: 70, category: "操作系统" },
-    { name: "Linux内核", level: 40, category: "操作系统" },
-    { name: "Linux编程", level: 50, category: "操作系统" },
-
-  ],  
+    {
+      category: "编程语言",
+      items: [
+        { name: "C/C++", level: "熟练掌握C/C++，熟悉STL标准库，熟悉多线程编程、网络编程" },
+        { name: "Rust", level: "掌握所有权、借用和生命周期核心思想，熟悉async/await异步编程及Rust并发模型" },
+        { name: "Python", level: "熟练进行数据分析、自动化脚本、Web开发" },
+        { name: "Java", level: "对Java语言较为了解，对面向对象思想十分熟悉" }
+      ]
+    },
+    {
+      category: "框架",
+      items: [
+        { name: "React", level: "熟练使用React进行组件化开发，掌握React Hooks、Redux状态管理" },
+        { name: "Leptos", level: "熟悉Rust WebAssembly前端开发，掌握Leptos的信号机制、异步加载、SSR渲染" },
+        { name: "Qt", level: "掌握Qt开发，熟悉QtWidgets和QtQuick，能够构建跨平台GUI应用" },
+        { name: "Tauri", level: "掌握Tauri的Rust后端与前端交互，熟悉WebView架构，能够开发轻量级跨平台应用" }
+      ]
+    },
+    {
+      category: "其他",
+      items: [
+        { name: "Linux", level: "熟悉Linux系统操作，掌握Shell脚本编写，能够进行服务器运维与性能调优" },
+        { name: "MySQL", level: "掌握MySQL数据库设计与优化，熟悉索引优化、事务机制、分库分表" },
+        { name: "Docker", level: "熟练使用Docker进行容器化部署，掌握Docker Compose、K8s集群管理" },
+        { name: "Git", level: "熟练掌握Git版本控制，了解Git Flow工作流，熟悉CI/CD自动化部署" }
+      ]
+    }
+  ],
+  
+  
   certifications: [
     { name: 'CET-6', issuer: 'Ministry of Education, PRC', date: '2023-12' },
   ],
@@ -157,13 +164,16 @@ export const RESUME_DATA = {
 export const RESUME_DATA_en = {
   name: "Ding Weihao",
   initials: "DWH",
+  birthDate: "2003-05-10",
+  gender: "Male",
+  top_education: "Undergraduate",
   location: "Hefei, Anhui Province",
   locationLink: "https://en.wikipedia.org/wiki/Hefei",
   about:
     "A university student who loves programming and Linux.",
   summary:
     "Computer Science and Technology student at Hefei University of Technology, proficient in C++, Rust, Python, and Java programming, familiar with Linux systems. Participated in computer graphics lab projects with experience in deep learning research. Passionate about programming, optimistic, and focused on practical skills and hands-on experience.",
-  avatarUrl: "/images/avatar.png",
+  avatarUrl: "/images/avatar.jpg",
   personalWebsiteUrl: "https://me.cxhao.top",
   contact: {
     email: "dingwh2023@126.com",
@@ -185,6 +195,7 @@ export const RESUME_DATA_en = {
     {
       school: "Hefei University of Technology",
       degree: "Undergraduate",
+      major: "Computer Science and Technology",
       start: "2022",
       end: "2026",
     },
@@ -198,15 +209,6 @@ export const RESUME_DATA_en = {
       start: '2023-08',
       end: '2026-06?',
       description: 'Participated in learning and research on various degradation methods for image restoration.'
-    },
-    {
-      organization: 'School Academic Development Center',
-      department: 'Academic Development Service Team',
-      topic: '',
-      position: 'Staff',
-      start: '2022-08',
-      end: '2023-12',
-      description: 'Responsible for coordinating academic assistance activities and participating in office duty.'
     },
   ],
   work: [
@@ -223,24 +225,35 @@ export const RESUME_DATA_en = {
     },
   ],
   skills: [
-    { name: "C/C++", level: 70, category: "Programming Languages" },
-    { name: "Rust", level: 60, category: "Programming Languages" },
-    { name: "Python", level: 75, category: "Programming Languages" },
-    { name: "Java", level: 60, category: "Programming Languages" },
-    { name: "JavaScript", level: 65, category: "Web Development" },
-    { name: "React", level: 60, category: "Web Development" },
-    { name: "HTML/CSS", level: 70, category: "Web Development" },
-    { name: "Node.js", level: 60, category: "Web Development" },
-    { name: "Qt/PyQt", level: 70, category: "Frameworks & Libraries" },
-    { name: "SQL", level: 70, category: "Databases" },
-    { name: "Git", level: 70, category: "Version Control" },
-    { name: "Docker", level: 65, category: "DevOps & Tools" },
-    { name: "Kubernetes", level: 60, category: "DevOps & Tools" },
-    { name: "Operations", level: 70, category: "Linux Operating Systems" },
-    { name: "Kernel", level: 40, category: "Linux Operating Systems" },
-    { name: "Coding", level: 50, category: "Linux Operating Systems" },
+    {
+      "category": "Programming Languages",
+      "items": [
+        { "name": "C/C++", "level": "Proficient in C/C++, STL, multithreading, and network programming" },
+        { "name": "Rust", "level": "Strong understanding of ownership, borrowing, lifetimes, async/await, and concurrency" },
+        { "name": "Python", "level": "Skilled in data analysis, scripting, and web development" },
+        { "name": "Java", "level": "Good grasp of Java and object-oriented programming" }
+      ]
+    },
+    {
+      "category": "Frontend Frameworks",
+      "items": [
+        { "name": "React", "level": "Experienced in component-based development, React Hooks, and Redux" },
+        { "name": "Leptos", "level": "Familiar with Rust WebAssembly, signals, async loading, and SSR" },
+        { "name": "Qt", "level": "Proficient in QtWidgets and QtQuick for cross-platform GUI development" },
+        { "name": "Tauri", "level": "Experienced in Rust backend and WebView-based cross-platform apps" }
+      ]
+    },
+    {
+      "category": "Others",
+      "items": [
+        { "name": "Linux", "level": "Skilled in Linux operations, Shell scripting, and server optimization" },
+        { "name": "MySQL", "level": "Proficient in database design, optimization, and sharding" },
+        { "name": "Docker", "level": "Experienced with containerization, Docker Compose, and Kubernetes" },
+        { "name": "Git", "level": "Skilled in version control, Git Flow, and CI/CD pipelines" }
+      ]
+    }
   ],
-  
+
   certifications: [
     { name: 'CET-6', issuer: 'Ministry of Education, PRC', date: '2023-12' },
   ],
@@ -278,13 +291,13 @@ export const RESUME_DATA_en = {
       techStack: [
         "Rust",
         "Finite State Automaton",
-],
-description: "Lexer for HFUT Compiler Principles course experiment, written in Rust, outputting custom enumeration types, currently capable of handling most statements.",
-logo: ConsultlyLogo,
-link: {
-label: "Lexer",
-href: "https://github.com/DingWH03/lexer",
-},
-},
-],
+      ],
+      description: "Lexer for HFUT Compiler Principles course experiment, written in Rust, outputting custom enumeration types, currently capable of handling most statements.",
+      logo: ConsultlyLogo,
+      link: {
+        label: "Lexer",
+        href: "https://github.com/DingWH03/lexer",
+      },
+    },
+  ],
 } as const;
