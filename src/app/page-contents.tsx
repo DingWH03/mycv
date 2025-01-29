@@ -147,12 +147,12 @@ export default function Page({ language }: PageProps) {
                     <h3 className="font-semibold leading-none">
                       {education.school}
                     </h3>
-                    <div className="text-xs tabular-nums text-gray-500">
+                    <div className="text-sm tabular-nums text-gray-500">
                       {education.start} - {education.end}
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="mt-1">{education.major}{<span className="mx-2">|</span>}{education.degree}</CardContent>
+                <CardContent className="mt-1 text-xs">{education.major}{<span className="mx-1">|</span>}{education.degree}</CardContent>
               </Card>
             );
           })}
@@ -225,39 +225,6 @@ export default function Page({ language }: PageProps) {
           </div>
         </Section>
 
-
-        <Section>
-          <h2 className="text-base font-bold border-b border-gray-300">
-            {language === 'ch' ? '在校经历' : 'Campus Activities'}
-          </h2>
-          {data.campusActivities.map((activity) => {
-            return (
-              <Card key={activity.organization}>
-                <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-sm">
-                    <h3 className="font-semibold leading-none">
-                      {activity.organization}
-                    </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
-                      {activity.start} - {activity.end}
-                    </div>
-                  </div>
-                  <h4 className="font-mono text-xs leading-none">{activity.position}</h4>
-                  {activity.department && (
-                    <h5 className="text-xs leading-none text-gray-500">{activity.department}</h5>
-                  )}
-                  {activity.topic && (
-                    <h5 className="text-xs leading-none text-gray-500">{activity.topic}</h5>
-                  )}
-                </CardHeader>
-                <CardContent className="mt-1 text-xs">{activity.description}</CardContent>
-              </Card>
-            );
-          })}
-        </Section>
-
-
-
         <Section>
           <h2 className="text-base font-bold border-b border-gray-300">
             {language === 'ch' ? '工作经历' : 'Work Experience'}
@@ -296,6 +263,37 @@ export default function Page({ language }: PageProps) {
                 <CardContent className="mt-1 text-xs">
                   {work.description}
                 </CardContent>
+              </Card>
+            );
+          })}
+        </Section>
+
+
+        <Section>
+          <h2 className="text-base font-bold border-b border-gray-300">
+            {language === 'ch' ? '在校经历' : 'Campus Activities'}
+          </h2>
+          {data.campusActivities.map((activity) => {
+            return (
+              <Card key={activity.organization}>
+                <CardHeader>
+                  <div className="flex items-center justify-between gap-x-2 text-sm">
+                    <h3 className="font-semibold leading-none">
+                      {activity.organization}
+                    </h3>
+                    <div className="text-sm tabular-nums text-gray-500">
+                      {activity.start} - {activity.end}
+                    </div>
+                  </div>
+                  <h4 className="font-mono text-xs leading-none">{activity.position}</h4>
+                  {activity.department && (
+                    <h5 className="text-xs leading-none text-gray-500">{activity.department}</h5>
+                  )}
+                  {activity.topic && (
+                    <h5 className="text-xs leading-none text-gray-500">{activity.topic}</h5>
+                  )}
+                </CardHeader>
+                <CardContent className="mt-1 text-xs">{activity.description}</CardContent>
               </Card>
             );
           })}

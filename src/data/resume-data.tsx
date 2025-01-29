@@ -97,17 +97,16 @@ export const RESUME_DATA = {
       items: [
         { name: "React", level: "熟练使用React进行组件化开发，掌握React Hooks、Redux状态管理" },
         { name: "Leptos", level: "熟悉Rust WebAssembly前端开发，掌握Leptos的信号机制、异步加载、SSR渲染" },
-        { name: "Qt", level: "掌握Qt开发，熟悉QtWidgets和QtQuick，能够构建跨平台GUI应用" },
+        { name: "Qt", level: "掌握Qt开发，熟悉Qt库，熟悉QtWidgets和QtQuick，能够构建跨平台GUI应用" },
         { name: "Tauri", level: "掌握Tauri的Rust后端与前端交互，熟悉WebView架构，能够开发轻量级跨平台应用" }
       ]
     },
     {
       category: "其他",
       items: [
-        { name: "Linux", level: "熟悉Linux系统操作，掌握Shell脚本编写，能够进行服务器运维与性能调优" },
+        { name: "Linux", level: "熟悉Linux系统操作，掌握Shell脚本编写，能够进行服务器运维与性能调优以及问题排查" },
         { name: "MySQL", level: "掌握MySQL数据库设计与优化，熟悉索引优化、事务机制、分库分表" },
-        { name: "Docker", level: "熟练使用Docker进行容器化部署，掌握Docker Compose、K8s集群管理" },
-        { name: "Git", level: "熟练掌握Git版本控制，了解Git Flow工作流，熟悉CI/CD自动化部署" }
+        { name: "Git", level: "熟练使用Git工具，熟练掌握Git版本控制，了解Git Flow工作流，熟悉CI/CD自动化部署" }
       ]
     }
   ],
