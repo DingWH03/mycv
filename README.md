@@ -1,25 +1,13 @@
-![cv](https://github.com/BartoszJarocki/cv/assets/1017620/79bdb9fc-0b20-4d2c-aafe-0526ad4a71d2)
+# mycv
 
-# Minimalist CV [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FBartoszJarocki%2Fcv)
+基于[BartoszJarocki/cv](https://github.com/BartoszJarocki/cv)项目修改而来，加入中英文支持，更适合中文环境的简单Web简历。
 
-Simple web app that renders minimalist CV with print-friendly layout.
-
-Built with Next.js and shadcn/ui, deployed on Vercel.
-
-# Features
-
-- Setup only takes a few minutes [single config file](./src/data/resume-data.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/ui, TailwindCss
-- Auto generated Layout
-- Responsive for different devices
-- Optimized for Next.js and Vercel
-
-# Getting Started Locally
+## Getting Started Locally
 
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/BartoszJarocki/cv.git
+   git clone https://github.com/DingWH03/mycv.git
    ```
 
 2. Move to the cloned directory
@@ -42,26 +30,22 @@ Built with Next.js and shadcn/ui, deployed on Vercel.
 
 5. Open the [Config file](./src/data/resume-data.tsx) and make changes
 
-# Run with Docker
+## Run with Docker
 
 Build the container
 
-```
+```bash
 docker compose build
 ```
 
 Run the container
 
-```
+```bash
 docker compose up -d
 ```
 
 Stop the Container
 
-```
+```bash
 docker compose down 
 ```
-
-# License
-
-[MIT](https://choosealicense.com/licenses/mit/)

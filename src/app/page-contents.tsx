@@ -41,7 +41,7 @@ export default function Page({ language }: PageProps) {
   const data = language === 'ch' ? RESUME_DATA : RESUME_DATA_en;
 
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-0 md:p-16">
+    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-0 md:p-8">
       <section className="mx-auto w-full max-w-3xl space-y-4 bg-white print:space-y-2">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
@@ -117,6 +117,11 @@ export default function Page({ language }: PageProps) {
                   <span className="underline">{data.contact.tel}</span>
                 </a>
               ) : null}
+              {data.contact.github ? (
+                <a href={`Github:${data.contact.github}`}>
+                  <span className="underline">{data.contact.github}</span>
+                </a>
+              ) : null}
             </div>
           </div>
 
@@ -168,11 +173,11 @@ export default function Page({ language }: PageProps) {
             {data.skills.map((skillCategory, index) => (
               <div key={index}>
                 <h3 className="text-sm font-semibold">{skillCategory.category}</h3>
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-1">
                   {skillCategory.items.map((skill, index) => (
                     <span
                       key={index}
-                      className="px-1 py-0 text-xs font-medium text-black"
+                      className="px-1 py-0 text-sm font-light text-black"
                     >
                       · {skill.name} {skill.level && `: ${skill.level}`}
                     </span>
@@ -206,11 +211,11 @@ export default function Page({ language }: PageProps) {
         </Section>
 
         {/* 在这里控制打印时强制换行print-force-new-page */}
-        <Section className="scroll-mb-16">
+        <Section className="scroll-mb-16 print:page-break-inside-avoid">
           <h2 className="text-base font-bold border-b border-gray-300">
             {language === 'ch' ? '个人项目' : 'Personal Projects'}
           </h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
+          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-3 lg:grid-cols-3">
             {data.projects.map((project) => {
               return (
                 <ProjectCard
@@ -225,7 +230,7 @@ export default function Page({ language }: PageProps) {
           </div>
         </Section>
 
-        <Section>
+        <Section className="print:page-break-inside-avoid">
           <h2 className="text-base font-bold border-b border-gray-300">
             {language === 'ch' ? '工作经历' : 'Work Experience'}
           </h2>

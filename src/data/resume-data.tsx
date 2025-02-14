@@ -22,13 +22,13 @@ import { GitHubIcon, LinkedInIcon, XIcon, QQIcon } from "@/components/icons";
 export const RESUME_DATA = {
   name: "丁伟豪",
   initials: "DWH",
-  birthDate: "2003-05-10",
+  birthDate: "2003-07-10",
   gender: "男",
   top_education: "本科",
   location: "安徽省合肥市",
   locationLink: "https://zh.wikipedia.org/wiki/%E5%90%88%E8%82%A5%E5%B8%82",
   about:
-    "一个热爱编程、热爱linux的在校大学生。",
+    "钻研，探索",
   summary:
     "合肥工业大学计算机科学与技术专业学生，擅长C++、Rust、Python和Java编程，熟悉Linux系统。参与过计算机图形学实验室项目，有深度学习研究经验。热爱编程，积极乐观，注重实践和动手能力的提升。",
   avatarUrl: "/images/avatar.jpg",
@@ -36,6 +36,7 @@ export const RESUME_DATA = {
   contact: {
     email: "dingwh2023@126.com",
     tel: "+8615556183656",
+    github: "https://github.com/DingWH03",
     social: [
       {
         name: "QQ",
@@ -65,7 +66,7 @@ export const RESUME_DATA = {
       topic: '',
       position: '',
       start: '2023-08',
-      end: '2026-06?',
+      end: '2024-08',
       description: '参与图像去除多种退化方式的学习和研究。'
     },
   ],
@@ -104,9 +105,9 @@ export const RESUME_DATA = {
     {
       category: "其他",
       items: [
-        { name: "Linux", level: "熟悉Linux系统操作，掌握Shell脚本编写，能够进行服务器运维与性能调优以及问题排查" },
+        { name: "Linux", level: "熟悉Linux系统操作，掌握Shell脚本编写，能够进行服务器运维以及问题排查" },
         { name: "MySQL", level: "掌握MySQL数据库设计与优化，熟悉索引优化、事务机制、分库分表" },
-        { name: "Git", level: "熟练使用Git工具，熟练掌握Git版本控制，了解Git Flow工作流，熟悉CI/CD自动化部署" }
+        { name: "Git", level: "熟练使用Git工具，熟练掌握Git版本控制，了解CI/CD自动化部署" }
       ]
     }
   ],
@@ -124,7 +125,7 @@ export const RESUME_DATA = {
         "B+ Tree",
         "Trie Tree",
       ],
-      description: "利用结巴分词实现单词翻译查找，利用 TrieTree 与 BPlusTree 实现英文查找",
+      description: "HFUT数据结构课程设计，利用结巴分词实现单词翻译查找，利用 TrieTree 与 BPlusTree 实现英文查找",
       logo: ConsultlyLogo,
       link: {
         label: "Qt-E-dict",
@@ -137,7 +138,7 @@ export const RESUME_DATA = {
         "Python",
         "PyQt",
       ],
-      description: "一个pyside6开发的网易云音乐第三方客户端，使用了NeteaseCloudMusic_PythonSDK，HFUT Python语言与系统设计课程大作业",
+      description: "HFUT Python语言与系统设计课程大作业，使用pyside6开发，基于网易云(曾)开源python api，实现了歌词显示及定位，使用面向对象思想，多线程支持",
       logo: ConsultlyLogo,
       link: {
         label: "Xiximusic",
@@ -157,19 +158,62 @@ export const RESUME_DATA = {
         href: "https://github.com/DingWH03/lexer",
       },
     },
+    {
+      title: "Risc-v CPU",
+      techStack: [
+        "SystemVerilog",
+        "Risc-v",
+        "Vivado",
+        "Verilator",
+      ],
+      description: "HFUT系统硬件综合设计课程大作业，使用SystemVerilog语言编写Risc-v CPU，支持RV64I指令集与十级流水线",
+      logo: ConsultlyLogo,
+      link: {
+        label: "RVCPU",
+        href: "https://github.com/DingWH03/RVCPU",
+      },
+    },
+    {
+      title: "Web在线简历",
+      techStack: [
+        "React",
+        "TypeScript",
+        "Next.js",
+      ],
+      description: "前端项目，基于国外开源项目修改而来，加入双语支持，修改页面布局，即本简历",
+      logo: ConsultlyLogo,
+      link: {
+        label: "mycv",
+        href: "https://github.com/DingWH03/mycv",
+      },
+    },
+    {
+      title: "Web导航",
+      techStack: [
+        "React",
+        "TypeScript",
+        "Next.js",
+      ],
+      description: "前端项目，基于国外开源项目修改而来，加入搜索功能，用于索引常用网页",
+      logo: ConsultlyLogo,
+      link: {
+        label: "home-nav",
+        href: "https://github.com/DingWH03/home-nav",
+      },
+    },
   ],
 } as const;
 
 export const RESUME_DATA_en = {
   name: "Ding Weihao",
   initials: "DWH",
-  birthDate: "2003-05-10",
+  birthDate: "2003-07-10",
   gender: "Male",
   top_education: "Undergraduate",
   location: "Hefei, Anhui Province",
   locationLink: "https://en.wikipedia.org/wiki/Hefei",
   about:
-    "A university student who loves programming and Linux.",
+    "Explore, delve deep.",
   summary:
     "Computer Science and Technology student at Hefei University of Technology, proficient in C++, Rust, Python, and Java programming, familiar with Linux systems. Participated in computer graphics lab projects with experience in deep learning research. Passionate about programming, optimistic, and focused on practical skills and hands-on experience.",
   avatarUrl: "/images/avatar.jpg",
@@ -177,6 +221,7 @@ export const RESUME_DATA_en = {
   contact: {
     email: "dingwh2023@126.com",
     tel: "+8615556183656",
+    github: "https://github.com/DingWH03",
     social: [
       {
         name: "QQ",
@@ -206,7 +251,7 @@ export const RESUME_DATA_en = {
       topic: '',
       position: '',
       start: '2023-08',
-      end: '2026-06?',
+      end: '2024-08',
       description: 'Participated in learning and research on various degradation methods for image restoration.'
     },
   ],
@@ -225,30 +270,29 @@ export const RESUME_DATA_en = {
   ],
   skills: [
     {
-      "category": "Programming Languages",
-      "items": [
-        { "name": "C/C++", "level": "Proficient in C/C++, STL, multithreading, and network programming" },
-        { "name": "Rust", "level": "Strong understanding of ownership, borrowing, lifetimes, async/await, and concurrency" },
-        { "name": "Python", "level": "Skilled in data analysis, scripting, and web development" },
-        { "name": "Java", "level": "Good grasp of Java and object-oriented programming" }
+      category: "Programming Languages",
+      items: [
+        { name: "C/C++", level: "Proficient in C/C++, familiar with STL standard library, experienced in multithreading and network programming" },
+        { name: "Rust", level: "Understand core concepts of ownership, borrowing, and lifetimes, familiar with async/await asynchronous programming and Rust's concurrency model" },
+        { name: "Python", level: "Skilled in data analysis, automation scripting, and web development" },
+        { name: "Java", level: "Knowledgeable in Java, with a strong understanding of object-oriented programming principles" }
       ]
     },
     {
-      "category": "Frontend Frameworks",
-      "items": [
-        { "name": "React", "level": "Experienced in component-based development, React Hooks, and Redux" },
-        { "name": "Leptos", "level": "Familiar with Rust WebAssembly, signals, async loading, and SSR" },
-        { "name": "Qt", "level": "Proficient in QtWidgets and QtQuick for cross-platform GUI development" },
-        { "name": "Tauri", "level": "Experienced in Rust backend and WebView-based cross-platform apps" }
+      category: "Frameworks",
+      items: [
+        { name: "React", level: "Proficient in component-based development using React, experienced with React Hooks and Redux state management" },
+        { name: "Leptos", level: "Familiar with Rust WebAssembly frontend development, understands Leptos's signaling mechanism, asynchronous loading, and SSR rendering" },
+        { name: "Qt", level: "Skilled in Qt development, familiar with Qt libraries, QtWidgets, and QtQuick, capable of building cross-platform GUI applications" },
+        { name: "Tauri", level: "Understands Tauri's Rust backend and frontend interaction, familiar with WebView architecture, capable of developing lightweight cross-platform applications" }
       ]
     },
     {
-      "category": "Others",
-      "items": [
-        { "name": "Linux", "level": "Skilled in Linux operations, Shell scripting, and server optimization" },
-        { "name": "MySQL", "level": "Proficient in database design, optimization, and sharding" },
-        { "name": "Docker", "level": "Experienced with containerization, Docker Compose, and Kubernetes" },
-        { "name": "Git", "level": "Skilled in version control, Git Flow, and CI/CD pipelines" }
+      category: "Others",
+      items: [
+        { name: "Linux", level: "Familiar with Linux system operations, skilled in Shell scripting, capable of server maintenance and troubleshooting" },
+        { name: "MySQL", level: "Skilled in MySQL database design and optimization, familiar with index optimization, transaction mechanisms, and database sharding" },
+        { name: "Git", level: "Proficient in using Git, skilled in version control with Git, understands CI/CD automated deployment" }
       ]
     }
   ],
@@ -265,7 +309,7 @@ export const RESUME_DATA_en = {
         "B+ Tree",
         "Trie Tree",
       ],
-      description: "Utilizes Jieba word segmentation for word translation lookup, and TrieTree and BPlusTree for English lookup.",
+      description: "HFUT Data Structure Course Design. Implemented word translation lookup using Jieba segmentation, and English word search using TrieTree and BPlusTree.",
       logo: ConsultlyLogo,
       link: {
         label: "Qt-E-dict",
@@ -278,7 +322,7 @@ export const RESUME_DATA_en = {
         "Python",
         "PyQt",
       ],
-      description: "A PySide6-developed NeteaseCloudMusic third-party client that uses the NeteaseCloudMusic_PythonSDK, HFUT Python Language and System Design Course Project",
+      description: "HFUT Python Language and System Design Course Project. Developed using PySide6, based on NetEase Cloud's (formerly) open-source Python API. Implemented lyric display and positioning, utilizing object-oriented programming and multithreading support.",
       logo: ConsultlyLogo,
       link: {
         label: "Xiximusic",
@@ -286,16 +330,59 @@ export const RESUME_DATA_en = {
       },
     },
     {
-      title: "Lexer",
+      title: "Lexical Analyzer",
       techStack: [
         "Rust",
         "Finite State Automaton",
       ],
-      description: "Lexer for HFUT Compiler Principles course experiment, written in Rust, outputting custom enumeration types, currently capable of handling most statements.",
+      description: "HFUT Compiler Principles Course Experiment. A lexical analyzer written in Rust, outputting custom enum types. Currently capable of processing most statements.",
       logo: ConsultlyLogo,
       link: {
         label: "Lexer",
         href: "https://github.com/DingWH03/lexer",
+      },
+    },
+    {
+      title: "Risc-v CPU",
+      techStack: [
+        "SystemVerilog",
+        "Risc-v",
+        "Vivado",
+        "Verilator",
+      ],
+      description: "HFUT System Hardware Comprehensive Design Course Project. A Risc-v CPU written in SystemVerilog, supporting the RV64I instruction set and ten-stage pipelining.",
+      logo: ConsultlyLogo,
+      link: {
+        label: "RVCPU",
+        href: "https://github.com/DingWH03/RVCPU",
+      },
+    },
+    {
+      title: "Web Online Resume",
+      techStack: [
+        "React",
+        "TypeScript",
+        "Next.js",
+      ],
+      description: "Frontend project, modified from an open-source foreign project. Added bilingual support and adjusted page layout. This is the resume itself.",
+      logo: ConsultlyLogo,
+      link: {
+        label: "mycv",
+        href: "https://github.com/DingWH03/mycv",
+      },
+    },
+    {
+      title: "Web Navigation",
+      techStack: [
+        "React",
+        "TypeScript",
+        "Next.js",
+      ],
+      description: "Frontend project, modified from an open-source foreign project. Added search functionality for indexing commonly used web pages.",
+      logo: ConsultlyLogo,
+      link: {
+        label: "home-nav",
+        href: "https://github.com/DingWH03/home-nav",
       },
     },
   ],
