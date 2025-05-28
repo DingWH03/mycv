@@ -33,6 +33,7 @@ export const RESUME_DATA = {
     "合肥工业大学计算机科学与技术专业学生，擅长C++、Rust、Python和Java编程，熟悉Linux系统。参与过计算机图形学实验室项目，有深度学习研究经验。热爱编程，积极乐观，注重实践和动手能力的提升。",
   avatarUrl: "/images/avatar.jpg",
   personalWebsiteUrl: "https://me.cxhao.top",
+  target: "嵌入式系统开发工程师",
   contact: {
     email: "dingwh2023@126.com",
     tel: "+8615556183656",
@@ -83,34 +84,29 @@ export const RESUME_DATA = {
         "暂无工作与实习经历。",
     },
   ],
+
   skills: [
-    {
-      category: "编程语言",
-      items: [
-        { name: "C/C++", level: "熟练掌握C/C++，熟悉STL标准库，熟悉多线程编程、网络编程" },
-        { name: "Rust", level: "掌握所有权、借用和生命周期核心思想，熟悉async/await异步编程及Rust并发模型" },
-        { name: "Python", level: "熟练进行数据分析、自动化脚本、Web开发" },
-        { name: "Java", level: "对Java语言较为了解，对面向对象思想十分熟悉" }
-      ]
-    },
-    {
-      category: "框架",
-      items: [
-        { name: "React", level: "熟练使用React进行组件化开发，掌握React Hooks、Redux状态管理" },
-        { name: "Leptos", level: "熟悉Rust WebAssembly前端开发，掌握Leptos的信号机制、异步加载、SSR渲染" },
-        { name: "Qt", level: "掌握Qt开发，熟悉Qt库，熟悉QtWidgets和QtQuick，能够构建跨平台GUI应用" },
-        { name: "Tauri", level: "掌握Tauri的Rust后端与前端交互，熟悉WebView架构，能够开发轻量级跨平台应用" }
-      ]
-    },
-    {
-      category: "其他",
-      items: [
-        { name: "Linux", level: "熟悉Linux系统操作，掌握Shell脚本编写，能够进行服务器运维以及问题排查" },
-        { name: "MySQL", level: "掌握MySQL数据库设计与优化，熟悉索引优化、事务机制、分库分表" },
-        { name: "Git", level: "熟练使用Git工具，熟练掌握Git版本控制，了解CI/CD自动化部署" }
-      ]
-    }
-  ],
+  {
+    category: "编程语言",
+    items: [
+      { name: "C/C++", level: "精通 C/C++，能独立开发高效的底层驱动与应用程序，熟悉 STL 标准库，掌握多线程与网络编程" },
+      { name: "Rust", level: "熟悉 Rust 核心概念，掌握 async/await 异步编程与并发模型，能使用 Rust 编写高性能系统级程序" },
+      { name: "汇编语言", level: "熟悉汇编语言，了解底层指令集与嵌入式系统启动流程" }
+    ]
+  },
+  {
+    category: "开发",
+    items: [
+      { name: "操作系统", level: "精通 Linux 内核架构与驱动开发，能独立移植与调试 RTOS（如 FreeRTOS、RT-Thread）至目标硬件平台" },
+      { name: "计算机网络", level: "熟悉 TCP/IP 协议栈，能独立实现网络应用程序，了解网络安全与加密技术，实现基于ip的通信技术" },
+      { name: "嵌入式系统", level: "精通嵌入式系统原理，能独立开发 RISC-V 与 ARM 裸机程序、Linux 系统或 RTOS 程序" },
+      { name: "硬件接口与通信协议", level: "熟悉 I²C、SPI、UART、CAN、USB、以太网（PHY 层）、SDIO 等常用接口协议。" },
+      { name: "调试工具", level: "精通 GDB、J-Link、OpenOCD 调试，熟练操作逻辑分析仪和示波器进行硬件调试" },
+      { name: "开发环境", level: "精通 GCC、Clang 交叉编译工具链，能独立配置开发环境，熟练使用 Makefile 和 CMake 构建嵌入式项目" }
+    ]
+  },
+],
+
   
   
   certifications: [
@@ -174,31 +170,31 @@ export const RESUME_DATA = {
       },
     },
     {
-      title: "Web在线简历",
+      title: "arch-img-builder",
       techStack: [
-        "React",
-        "TypeScript",
-        "Next.js",
+        "Shell",
+        "CI/CD",
       ],
-      description: "前端项目，基于国外开源项目修改而来，加入双语支持，修改页面布局，即本简历",
+      description: "自动化构建Arch Linux镜像的工具，使用Shell脚本和CI/CD流程，自动编译kernel、uboot、opensbi与rootfs，生成可用于烧录的镜像文件",
       logo: ConsultlyLogo,
       link: {
-        label: "mycv",
-        href: "https://github.com/DingWH03/mycv",
+        label: "arch-img-builder",
+        href: "https://github.com/DingWH03/arch-img-builder",
       },
     },
     {
-      title: "Web导航",
+      title: "uchat",
       techStack: [
-        "React",
-        "TypeScript",
-        "Next.js",
+        "rust",
+        "tcp",
+        "async",
+        "mysql"
       ],
-      description: "前端项目，基于国外开源项目修改而来，加入搜索功能，用于索引常用网页",
+      description: "基于rust的聊天应用，使用TCP协议实现客户端与服务器端的通信，支持异步处理和MySQL数据库存储",
       logo: ConsultlyLogo,
       link: {
-        label: "home-nav",
-        href: "https://github.com/DingWH03/home-nav",
+        label: "uchat",
+        href: "https://github.com/DingWH03/uchat",
       },
     },
   ],
@@ -218,6 +214,7 @@ export const RESUME_DATA_en = {
     "Computer Science and Technology student at Hefei University of Technology, proficient in C++, Rust, Python, and Java programming, familiar with Linux systems. Participated in computer graphics lab projects with experience in deep learning research. Passionate about programming, optimistic, and focused on practical skills and hands-on experience.",
   avatarUrl: "/images/avatar.jpg",
   personalWebsiteUrl: "https://me.cxhao.top",
+  target: "Embedded Systems Development Engineer",
   contact: {
     email: "dingwh2023@126.com",
     tel: "+8615556183656",
@@ -269,33 +266,27 @@ export const RESUME_DATA_en = {
     },
   ],
   skills: [
-    {
-      category: "Programming Languages",
-      items: [
-        { name: "C/C++", level: "Proficient in C/C++, familiar with STL standard library, experienced in multithreading and network programming" },
-        { name: "Rust", level: "Understand core concepts of ownership, borrowing, and lifetimes, familiar with async/await asynchronous programming and Rust's concurrency model" },
-        { name: "Python", level: "Skilled in data analysis, automation scripting, and web development" },
-        { name: "Java", level: "Knowledgeable in Java, with a strong understanding of object-oriented programming principles" }
-      ]
-    },
-    {
-      category: "Frameworks",
-      items: [
-        { name: "React", level: "Proficient in component-based development using React, experienced with React Hooks and Redux state management" },
-        { name: "Leptos", level: "Familiar with Rust WebAssembly frontend development, understands Leptos's signaling mechanism, asynchronous loading, and SSR rendering" },
-        { name: "Qt", level: "Skilled in Qt development, familiar with Qt libraries, QtWidgets, and QtQuick, capable of building cross-platform GUI applications" },
-        { name: "Tauri", level: "Understands Tauri's Rust backend and frontend interaction, familiar with WebView architecture, capable of developing lightweight cross-platform applications" }
-      ]
-    },
-    {
-      category: "Others",
-      items: [
-        { name: "Linux", level: "Familiar with Linux system operations, skilled in Shell scripting, capable of server maintenance and troubleshooting" },
-        { name: "MySQL", level: "Skilled in MySQL database design and optimization, familiar with index optimization, transaction mechanisms, and database sharding" },
-        { name: "Git", level: "Proficient in using Git, skilled in version control with Git, understands CI/CD automated deployment" }
-      ]
-    }
-  ],
+  {
+    category: "Programming Languages",
+    items: [
+      { name: "C/C++", level: "Proficient in C/C++, capable of independently developing efficient low-level drivers and applications, familiar with the STL standard library, and skilled in multithreading and network programming." },
+      { name: "Rust", level: "Familiar with core Rust concepts, adept in async/await asynchronous programming and concurrency models, able to develop high-performance system-level programs using Rust." },
+      { name: "Assembly Language", level: "Familiar with assembly language, understanding low-level instruction sets and embedded system boot processes." }
+    ]
+  },
+  {
+    category: "Development",
+    items: [
+      { name: "Operating Systems", level: "Proficient in Linux kernel architecture and driver development, capable of independently porting and debugging RTOS (such as FreeRTOS, RT-Thread) on target hardware platforms." },
+      { name: "Computer Networks", level: "Familiar with TCP/IP protocol stack, capable of independently implementing network applications, understanding network security and encryption techniques, and developing IP-based communication technologies." },
+      { name: "Embedded Systems", level: "Proficient in embedded system principles, capable of independently developing RISC-V and ARM bare-metal programs, Linux-based systems, and RTOS-based applications." },
+      { name: "Hardware Interfaces and Communication Protocols", level: "Familiar with common interfaces such as I²C, SPI, UART, CAN, USB, Ethernet (PHY layer), and SDIO." },
+      { name: "Debugging Tools", level: "Proficient in using GDB, J-Link, and OpenOCD for debugging, skilled in operating logic analyzers and oscilloscopes for hardware debugging." },
+      { name: "Development Environment", level: "Proficient in using GCC and Clang cross-compilation toolchains, capable of independently configuring development environments, and familiar with building embedded projects using Makefile and CMake." }
+    ]
+  }
+],
+
 
   certifications: [
     { name: 'CET-6', issuer: 'Ministry of Education, PRC', date: '2023-12' },
@@ -358,32 +349,32 @@ export const RESUME_DATA_en = {
       },
     },
     {
-      title: "Web Online Resume",
-      techStack: [
-        "React",
-        "TypeScript",
-        "Next.js",
-      ],
-      description: "Frontend project, modified from an open-source foreign project. Added bilingual support and adjusted page layout. This is the resume itself.",
-      logo: ConsultlyLogo,
-      link: {
-        label: "mycv",
-        href: "https://github.com/DingWH03/mycv",
-      },
-    },
-    {
-      title: "Web Navigation",
-      techStack: [
-        "React",
-        "TypeScript",
-        "Next.js",
-      ],
-      description: "Frontend project, modified from an open-source foreign project. Added search functionality for indexing commonly used web pages.",
-      logo: ConsultlyLogo,
-      link: {
-        label: "home-nav",
-        href: "https://github.com/DingWH03/home-nav",
-      },
-    },
+  title: "arch-img-builder",
+  techStack: [
+    "Shell",
+    "CI/CD"
+  ],
+  description: "An automated Arch Linux image builder that uses Shell scripts and CI/CD pipelines to compile the kernel, U-Boot, OpenSBI, and rootfs, and generates flashable image files.",
+  logo: ConsultlyLogo,
+  link: {
+    label: "arch-img-builder",
+    href: "https://github.com/DingWH03/arch-img-builder"
+  }
+},
+{
+  title: "uchat",
+  techStack: [
+    "Rust",
+    "TCP",
+    "Async",
+    "MySQL"
+  ],
+  description: "A chat application built with Rust, using the TCP protocol for client-server communication. It supports asynchronous processing and stores data in a MySQL database.",
+  logo: ConsultlyLogo,
+  link: {
+    label: "uchat",
+    href: "https://github.com/DingWH03/uchat"
+  }
+}
   ],
 } as const;

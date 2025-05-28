@@ -44,84 +44,87 @@ export default function Page({ language }: PageProps) {
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-0 md:p-8">
       <section className="mx-auto w-full max-w-3xl space-y-4 bg-white print:space-y-2">
         <div className="flex items-center justify-between">
-          <div className="flex-1 space-y-1.5">
-            <h1 className="text-lg font-bold">{data.name}</h1>
-            {/* <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
-              {data.about}
-            </p> */}
-            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
+          <div className="flex-1 space-y-2">
+            {/* Name */}
+            <div className="text-center">
+              <h1 className="text-3xl font-bold">{data.name}</h1>
+            </div>
+
+            {/* Combined Basic Info & Location */}
+            <p className="flex flex-wrap justify-center items-center space-x-2 font-mono text-sm text-muted-foreground">
+              {data.location && (
+                <>
+                  <a
+                    className="inline-flex gap-x-1 hover:underline"
+                    href={data.locationLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <GlobeIcon className="size-4" />
+                    {data.location}
+                  </a>
+                </>
+              )}
+              <span>|</span>
               <span>{getAge(data.birthDate)}</span>
-              <span className="mx-2">|</span>
+              <span>|</span>
               <span>{data.gender}</span>
-              <span className="mx-2">|</span>
+              <span>|</span>
               <span>{data.top_education}</span>
             </p>
 
-            <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
-              <a
-                className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
-                href={data.locationLink}
-                target="_blank"
-              >
-                <GlobeIcon className="size-3" />
-                {data.location}
-              </a>
-            </p>
-            <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
-              {data.contact.email ? (
-                <Button
-                  className="size-8"
-                  variant="outline"
-                  size="icon"
-                  asChild
-                >
+            
+
+
+            {/* Target Position */}
+            {data.target && (
+              <p className="flex justify-center mt-1 font-mono text-sm font-medium text-muted-foreground">
+                {language === 'ch' ? '意向岗位' : 'target'}：{data.target}
+              </p>
+            )}
+
+            {/* Contact Icons (Smaller) */}
+            <div className="flex justify-center gap-x-1 print:hidden">
+              {data.contact.email && (
+                <Button className="h-6 w-6 p-0" variant="outline" asChild>
                   <a href={`mailto:${data.contact.email}`}>
-                    <MailIcon className="size-4" />
+                    <MailIcon className="size-3" />
                   </a>
                 </Button>
-              ) : null}
-              {data.contact.tel ? (
-                <Button
-                  className="size-8"
-                  variant="outline"
-                  size="icon"
-                  asChild
-                >
+              )}
+              {data.contact.tel && (
+                <Button className="h-6 w-6 p-0" variant="outline" asChild>
                   <a href={`tel:${data.contact.tel}`}>
-                    <PhoneIcon className="size-4" />
+                    <PhoneIcon className="size-3" />
                   </a>
                 </Button>
-              ) : null}
+              )}
               {data.contact.social.map((social) => (
                 <Button
                   key={social.name}
-                  className="size-8"
+                  className="h-6 w-6 p-0"
                   variant="outline"
-                  size="icon"
                   asChild
                 >
-                  <a href={social.url}>
-                    <social.icon className="size-4" />
+                  <a href={social.url} target="_blank" rel="noopener noreferrer">
+                    <social.icon className="size-3" />
                   </a>
                 </Button>
               ))}
             </div>
-            <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
-              {data.contact.email ? (
-                <a href={`mailto:${data.contact.email}`}>
-                  <span className="underline">{data.contact.email}</span>
+
+            {/* Contact Details for Print */}
+            <div className="hidden print:flex justify-center space-x-4 font-mono text-sm text-muted-foreground">
+              {data.contact.email && (
+                <a href={`mailto:${data.contact.email}`} className="underline">
+                  {data.contact.email}
                 </a>
-              ) : null}
-              {data.contact.tel ? (
-                <a href={`tel:${data.contact.tel}`}>
-                  <span className="underline">{data.contact.tel}</span>
+              )}
+              {data.contact.tel && (
+                <a href={`tel:${data.contact.tel}`} className="underline">
+                  {data.contact.tel}
                 </a>
-              ) : null}
-              {data.contact.github ? (
-                <a href={`Github:${data.contact.github}`}>
-                  <span className="underline">{data.contact.github}</span>
-                </a>
-              ) : null}
+              )}
             </div>
           </div>
 

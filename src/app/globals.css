@@ -73,6 +73,27 @@
   body {
     @apply bg-background text-foreground;
   }
+  @media print {
+    .card-content,
+    .overflow-auto {
+      overflow: visible !important;
+    }
+
+    /* 让长文本自动换行，避免水平滚动 */
+    .card-content {
+      white-space: normal !important;
+      word-wrap: break-word !important;
+    }
+
+    /* 隐藏所有滚动条（Webkit/Firefox） */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    html,
+    body {
+      scrollbar-width: none;
+    }
+  }
 }
 
 .print-force-new-page {
