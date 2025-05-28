@@ -71,6 +71,14 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      fontFamily: {
+        // 设置 sans 为宋体
+        sans: ['SimSun', '宋体', 'serif'],
+        // 设置 serif 也为宋体
+        serif: ['SimSun', '宋体', 'serif'],
+        // 设置 mono 为宋体，避免代码块字体不同
+        mono: ['SimSun', '宋体', 'serif'],
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

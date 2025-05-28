@@ -72,6 +72,10 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: "SimSun", "宋体", serif;
+  }
+  .font-mono {
+    font-family: "SimSun", "宋体", serif !important;
   }
   @media print {
     .card-content,

@@ -45,12 +45,19 @@ export default function Page({ language }: PageProps) {
       <section className="mx-auto w-full max-w-3xl space-y-4 bg-white print:space-y-2">
         <div className="relative flex items-center">
           {/* 左侧信息块 */}
-          <div className="flex-1 flex flex-col items-center space-y-2">
-            {/* Name */}
-            <h1 className="text-3xl font-bold">{data.name}</h1>
+          <div className="flex-1 flex flex-col space-y-2">
+            {/* Name + Target */}
+            <h1 className="text-3xl font-bold">
+              {data.name}
+              {data.target && (
+                <span className="ml-6 font-mono text-base font-medium ">
+                  {language === 'ch' ? '意向岗位' : 'Target'}：{data.target}
+                </span>
+              )}
+            </h1>
 
             {/* Combined Basic Info & Location */}
-            <p className="flex flex-wrap justify-center items-center space-x-2 font-mono text-sm text-muted-foreground">
+            <p className="flex flex-wrap space-x-2 font-mono text-sm text-muted-foreground">
               {data.location && (
                 <>
                   <a
@@ -59,28 +66,21 @@ export default function Page({ language }: PageProps) {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <GlobeIcon className="size-4" />
+                    {/* <GlobeIcon className="size-4" /> */}
                     {data.location}
                   </a>
                 </>
               )}
               <span>|</span>
-              <span>{getAge(data.birthDate)}</span>
+              <span>{data.birthDate}({getAge(data.birthDate)})</span>
               <span>|</span>
               <span>{data.gender}</span>
               <span>|</span>
               <span>{data.top_education}</span>
             </p>
 
-            {/* Target Position */}
-            {data.target && (
-              <p className="font-mono text-sm font-medium text-muted-foreground">
-                {language === 'ch' ? '意向岗位' : 'Target'}：{data.target}
-              </p>
-            )}
-
             {/* Contact Icons */}
-            <div className="flex justify-center gap-x-1 print:hidden">
+            <div className="flex gap-x-1 print:hidden">
               {data.contact.email && (
                 <Button className="h-6 w-6 p-0" variant="outline" asChild>
                   <a href={`mailto:${data.contact.email}`}>
@@ -110,15 +110,20 @@ export default function Page({ language }: PageProps) {
             </div>
 
             {/* Contact Details for Print */}
-            <div className="hidden print:flex justify-center space-x-4 font-mono text-sm text-muted-foreground">
+            <div className="hidden print:flex space-x-4 font-mono text-sm text-muted-foreground">
+              {data.contact.tel && (
+                <a href={`tel:${data.contact.tel}`} className="underline">
+                  {data.contact.tel}
+                </a>
+              )}
               {data.contact.email && (
                 <a href={`mailto:${data.contact.email}`} className="underline">
                   {data.contact.email}
                 </a>
               )}
-              {data.contact.tel && (
-                <a href={`tel:${data.contact.tel}`} className="underline">
-                  {data.contact.tel}
+              {data.contact.github && (
+                <a href={`${data.contact.github}`} className="underline">
+                  {data.contact.github}
                 </a>
               )}
             </div>
@@ -188,16 +193,13 @@ export default function Page({ language }: PageProps) {
             {data.skills.map((skillCategory, index) => (
               <div key={index}>
                 <h3 className="text-sm font-semibold">{skillCategory.category}</h3>
-                <div className="flex flex-col gap-1">
-                  {skillCategory.items.map((skill, index) => (
-                    <span
-                      key={index}
-                      className="px-1 py-0 text-sm font-light text-black"
-                    >
-                      · {skill.name} {skill.level && `: ${skill.level}`}
-                    </span>
+                <ul className="list-disc list-inside text-sm font-light text-black space-y-1">
+                  {skillCategory.items.map((skill, idx) => (
+                    <li key={idx}>
+                      {skill.name} {skill.level && `: ${skill.level}`}
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             ))}
 
@@ -230,7 +232,7 @@ export default function Page({ language }: PageProps) {
           <h2 className="text-base font-bold border-b border-gray-300">
             {language === 'ch' ? '个人项目' : 'Personal Projects'}
           </h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-3 lg:grid-cols-3">
+          <div className="-mx-3 grid grid-cols-1 gap-3 print:mx-0 grid-cols-3 print:gap-2 md:grid-cols-3 lg:grid-cols-3">
             {data.projects.map((project) => {
               return (
                 <ProjectCard

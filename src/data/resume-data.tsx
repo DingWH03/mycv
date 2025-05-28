@@ -26,8 +26,8 @@ export const RESUME_DATA = {
   birthDate: "2003-07-10",
   gender: "男",
   top_education: "本科",
-  location: "安徽省合肥市",
-  locationLink: "https://zh.wikipedia.org/wiki/%E5%90%88%E8%82%A5%E5%B8%82",
+  location: "安徽五河",
+  locationLink: "https://zh.wikipedia.org/wiki/%E4%BA%94%E6%B2%B3%E5%8E%BF",
   about:
     "钻研，探索",
   summary:
@@ -36,7 +36,7 @@ export const RESUME_DATA = {
   personalWebsiteUrl: "https://me.cxhao.top",
   target: "嵌入式系统开发工程师",
   contact: {
-    email: "dingwh2023@126.com",
+    email: "DingVero@outlook.com",
     tel: "+8615556183656",
     github: "https://github.com/DingWH03",
     social: [
@@ -59,7 +59,7 @@ export const RESUME_DATA = {
       major: "计算机科学与技术",
       start: "2022",
       end: "2026",
-      description: "在 C++ 程序设计、数据结构、编译原理及系统硬件（CPU 设计）等多门课程的课程设计中均取得优异成绩，同时担任“互联网＋”创新创业大赛组长，擅长团队管理和项目管理。",
+      description: "在 C++ 程序设计、数据结构、编译原理及系统硬件（CPU 设计）等多门课程的课程设计中均取得优，同时担任“互联网＋”创新创业大赛组长，擅长团队管理和项目管理。",
     },
   ],
   campusActivities: [
@@ -99,12 +99,12 @@ export const RESUME_DATA = {
   {
     category: "开发",
     items: [
-      { name: "操作系统", level: "精通 Linux 内核架构与驱动开发，能独立移植与调试 RTOS（如 FreeRTOS、RT-Thread）至目标硬件平台" },
+      { name: "操作系统", level: "精通 Linux 内核架构与驱动开发，能独立移植与调试 RTOS（如RT-Thread）至目标硬件平台" },
       { name: "计算机网络", level: "熟悉 TCP/IP 协议栈，能独立实现网络应用程序，了解网络安全与加密技术，实现基于ip的通信技术" },
       { name: "嵌入式系统", level: "精通嵌入式系统原理，能独立开发 RISC-V 与 ARM 裸机程序、Linux 系统或 RTOS 程序" },
       { name: "硬件接口与通信协议", level: "熟悉 I²C、SPI、UART、CAN、USB、以太网（PHY 层）、SDIO 等常用接口协议。" },
       { name: "调试工具", level: "精通 GDB、J-Link、OpenOCD 调试，熟练操作逻辑分析仪和示波器进行硬件调试" },
-      { name: "开发环境", level: "精通 GCC、Clang 交叉编译工具链，能独立配置开发环境，熟练使用 Makefile 和 CMake 构建嵌入式项目" }
+      { name: "开发环境", level: "精通 GCC、Clang 交叉编译工具链，能独立配置开发环境，熟练使用 Makefile 和 CMake 构建项目" }
     ]
   },
 ],
@@ -208,8 +208,8 @@ export const RESUME_DATA_en = {
   birthDate: "2003-07-10",
   gender: "Male",
   top_education: "Undergraduate",
-  location: "Hefei, Anhui Province",
-  locationLink: "https://en.wikipedia.org/wiki/Hefei",
+  location: "Wuhe, Anhui Province",
+  locationLink: "https://en.wikipedia.org/wiki/Wuhe_County",
   about:
     "Explore, delve deep.",
   summary:
@@ -218,7 +218,7 @@ export const RESUME_DATA_en = {
   personalWebsiteUrl: "https://me.cxhao.top",
   target: "Embedded Systems Development Engineer",
   contact: {
-    email: "dingwh2023@126.com",
+    email: "DingVero@outlook.com",
     tel: "+8615556183656",
     github: "https://github.com/DingWH03",
     social: [
