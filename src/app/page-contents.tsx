@@ -43,12 +43,11 @@ export default function Page({ language }: PageProps) {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-0 md:p-8">
       <section className="mx-auto w-full max-w-3xl space-y-4 bg-white print:space-y-2">
-        <div className="flex items-center justify-between">
-          <div className="flex-1 space-y-2">
+        <div className="relative flex items-center">
+          {/* 左侧信息块 */}
+          <div className="flex-1 flex flex-col items-center space-y-2">
             {/* Name */}
-            <div className="text-center">
-              <h1 className="text-3xl font-bold">{data.name}</h1>
-            </div>
+            <h1 className="text-3xl font-bold">{data.name}</h1>
 
             {/* Combined Basic Info & Location */}
             <p className="flex flex-wrap justify-center items-center space-x-2 font-mono text-sm text-muted-foreground">
@@ -73,17 +72,14 @@ export default function Page({ language }: PageProps) {
               <span>{data.top_education}</span>
             </p>
 
-            
-
-
             {/* Target Position */}
             {data.target && (
-              <p className="flex justify-center mt-1 font-mono text-sm font-medium text-muted-foreground">
-                {language === 'ch' ? '意向岗位' : 'target'}：{data.target}
+              <p className="font-mono text-sm font-medium text-muted-foreground">
+                {language === 'ch' ? '意向岗位' : 'Target'}：{data.target}
               </p>
             )}
 
-            {/* Contact Icons (Smaller) */}
+            {/* Contact Icons */}
             <div className="flex justify-center gap-x-1 print:hidden">
               {data.contact.email && (
                 <Button className="h-6 w-6 p-0" variant="outline" asChild>
@@ -128,11 +124,15 @@ export default function Page({ language }: PageProps) {
             </div>
           </div>
 
-          <Avatar className="size-28">
-            <AvatarImage alt={data.name} src={data.avatarUrl} />
-            <AvatarFallback>{data.initials}</AvatarFallback>
-          </Avatar>
+          {/* 右侧头像，独立布局 */}
+          <div className="absolute right-0 top-0">
+            <Avatar className="size-28">
+              <AvatarImage alt={data.name} src={data.avatarUrl} />
+              <AvatarFallback>{data.initials}</AvatarFallback>
+            </Avatar>
+          </div>
         </div>
+
         {/* 个人简介部分，目前省略 */}
         {/* <Section>
           <h2 className="text-lg font-bold">
@@ -147,24 +147,36 @@ export default function Page({ language }: PageProps) {
           <h2 className="text-base font-bold border-b border-gray-300">
             {language === 'ch' ? '教育经历' : 'Education'}
           </h2>
-          {data.education.map((education) => {
-            return (
-              <Card key={education.school}>
-                <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-sm">
-                    <h3 className="font-semibold leading-none">
-                      {education.school}
-                    </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
-                      {education.start} - {education.end}
-                    </div>
+          {data.education.map((edu) => (
+            <Card key={edu.school + edu.start}>
+              <CardHeader>
+                <div className="flex items-center justify-between gap-x-2 text-sm">
+                  {/* 学校–专业–学位 */}
+                  <div className="flex items-baseline space-x-1">
+                    <span>{edu.school}</span>
+                    <span>-</span>
+                    <span>{edu.major}</span>
+                    <span>-</span>
+                    <span>{edu.degree}</span>
                   </div>
-                </CardHeader>
-                <CardContent className="mt-1 text-xs">{education.major}{<span className="mx-1">|</span>}{education.degree}</CardContent>
-              </Card>
-            );
-          })}
+                  {/* 时间 */}
+                  <div className="tabular-nums text-gray-500">
+                    {edu.start} – {edu.end}
+                  </div>
+                </div>
+              </CardHeader>
+
+              {/* 第二行：描述 */}
+              {edu.description && (
+                <CardContent className="mt-1 text-xs text-gray-600">
+                  {edu.description}
+                </CardContent>
+              )}
+            </Card>
+          ))}
         </Section>
+
+
 
 
         <Section>

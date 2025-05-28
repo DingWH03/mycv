@@ -18,6 +18,7 @@ import {
   YearProgressLogo,
 } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon, XIcon, QQIcon } from "@/components/icons";
+import { Description } from "@radix-ui/react-dialog";
 
 export const RESUME_DATA = {
   name: "丁伟豪",
@@ -58,6 +59,7 @@ export const RESUME_DATA = {
       major: "计算机科学与技术",
       start: "2022",
       end: "2026",
+      description: "在 C++ 程序设计、数据结构、编译原理及系统硬件（CPU 设计）等多门课程的课程设计中均取得优异成绩，同时担任“互联网＋”创新创业大赛组长，擅长团队管理和项目管理。",
     },
   ],
   campusActivities: [
@@ -239,6 +241,7 @@ export const RESUME_DATA_en = {
       major: "Computer Science and Technology",
       start: "2022",
       end: "2026",
+      description: "Achieved excellent results in course projects for C++ Programming, Data Structures, Compiler Principles, and System Hardware (CPU Design); served as the Entrepreneurship Team Leader in the “Internet+” Competition, excelling in team management and project management.",
     },
   ],
   campusActivities: [
