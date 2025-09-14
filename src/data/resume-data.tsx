@@ -86,6 +86,19 @@ export const RESUME_DATA = {
         "暂无工作与实习经历。",
     },
   ],
+  internship: [
+    {
+      company: "暂无实习经历",
+      link: "https://mycv.cxhap.top/",
+      badges: ["?"],
+      title: "暂无职位",
+      logo: ParabolLogo,
+      start: "?",
+      end: "?",
+      description:
+        "暂无工作与实习经历。",
+    },
+  ],
 
   skills: [
   {
@@ -109,8 +122,8 @@ export const RESUME_DATA = {
   },
 ],
 
-  
-  
+
+
   certifications: [
     { name: 'CET-6', issuer: 'Ministry of Education, PRC', date: '2023-12' },
   ],
@@ -256,17 +269,30 @@ export const RESUME_DATA_en = {
     },
   ],
   work: [
-    {
-      company: "No work experience yet",
-      link: "https://mycv.cxhap.top/",
-      badges: ["?"],
-      title: "No position yet",
-      logo: ParabolLogo,
-      start: "?",
-      end: "?",
-      description:
-        "No work or internship experience yet.",
-    },
+    // {
+    //   company: "No work experience yet",
+    //   link: "https://mycv.cxhap.top/",
+    //   badges: ["?"],
+    //   title: "No position yet",
+    //   logo: ParabolLogo,
+    //   start: "?",
+    //   end: "?",
+    //   description:
+    //     "No work or internship experience yet.",
+    // },
+  ],
+  internship: [
+    // {
+    //   company: "暂无实习经历",
+    //   link: "https://mycv.cxhap.top/",
+    //   badges: ["?"],
+    //   title: "暂无职位",
+    //   logo: ParabolLogo,
+    //   start: "?",
+    //   end: "?",
+    //   description:
+    //     "暂无工作与实习经历。",
+    // },
   ],
   skills: [
   {

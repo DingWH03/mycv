@@ -9,7 +9,7 @@ import { RESUME_DATA, RESUME_DATA_en } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
 
 interface PageProps {
-  language: string;
+  language: 'zh' | 'en';
 }
 
 interface Skill {
@@ -38,7 +38,7 @@ export const getAge = (birthDate: string | number | Date) => {
 
 export default function Page({ language }: PageProps) {
   // 根据语言选择数据
-  const data = language === 'ch' ? RESUME_DATA : RESUME_DATA_en;
+  const data = language === 'zh' ? RESUME_DATA : RESUME_DATA_en;
 
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-0 md:p-8">
@@ -51,7 +51,7 @@ export default function Page({ language }: PageProps) {
               {data.name}
               {data.target && (
                 <span className="ml-6 font-mono text-base font-medium ">
-                  {language === 'ch' ? '意向岗位' : 'Target'}：{data.target}
+                  {language === 'zh' ? '意向岗位' : 'Target'}：{data.target}
                 </span>
               )}
             </h1>
@@ -141,7 +141,7 @@ export default function Page({ language }: PageProps) {
         {/* 个人简介部分，目前省略 */}
         {/* <Section>
           <h2 className="text-lg font-bold">
-            {language === 'ch' ? '个人简介' : 'Personal Profile'}
+            {language === 'zh' ? '个人简介' : 'Personal Profile'}
           </h2>
           <p className="text-pretty font-mono text-sm text-muted-foreground">
             {data.summary}
@@ -150,7 +150,7 @@ export default function Page({ language }: PageProps) {
 
         <Section>
           <h2 className="text-base font-bold border-b border-gray-300">
-            {language === 'ch' ? '教育经历' : 'Education'}
+            {language === 'zh' ? '教育经历' : 'Education'}
           </h2>
           {data.education.map((edu) => (
             <Card key={edu.school + edu.start}>
@@ -186,7 +186,7 @@ export default function Page({ language }: PageProps) {
 
         <Section>
           <h2 className="text-base font-bold border-b border-gray-300">
-            {language === 'ch' ? "技能与证书" : "Skills and Certifications"}
+            {language === 'zh' ? "技能与证书" : "Skills and Certifications"}
           </h2>
 
           <div className="mt-0 space-y-1">
@@ -207,7 +207,7 @@ export default function Page({ language }: PageProps) {
             {/* Certifications Section */}
             <div className="mt-0">
               <h3 className="text-sm font-semibold">
-                {language === 'ch' ? "证书" : "Certifications"}
+                {language === 'zh' ? "证书" : "Certifications"}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {data.certifications.map((cert, index) => (
@@ -215,7 +215,7 @@ export default function Page({ language }: PageProps) {
                     <div className="flex flex-wrap gap-2">
                       <span
                         className="px-2 py-1 text-sm font-medium text-black"
-                        title={`${language === 'ch' ? "颁发机构：" : "Issuer:"} ${cert.issuer} (${cert.date})`}
+                        title={`${language === 'zh' ? "颁发机构：" : "Issuer:"} ${cert.issuer} (${cert.date})`}
                       >
                         {cert.name}
                       </span>
@@ -230,70 +230,120 @@ export default function Page({ language }: PageProps) {
         {/* 在这里控制打印时强制换行print-force-new-page */}
         <Section className="scroll-mb-16 print:page-break-inside-avoid">
           <h2 className="text-base font-bold border-b border-gray-300">
-            {language === 'ch' ? '个人项目' : 'Personal Projects'}
+            {language === 'zh' ? '个人项目' : 'Personal Projects'}
           </h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:mx-0 grid-cols-3 print:gap-2 md:grid-cols-3 lg:grid-cols-3">
-            {data.projects.map((project) => {
+          <div className="-mx-3 grid grid-cols-1 gap-2 print:mx-0 print:gap-0 md:grid-cols-1 lg:grid-cols-1">
+            {data.projects.map((project, index) => {
               return (
                 <ProjectCard
                   key={project.title}
+                  order={index + 1} // 自动生成序号，index从0开始，所以加1
                   title={project.title}
                   description={project.description}
                   tags={project.techStack}
                   link={"link" in project ? project.link.href : undefined}
+                  language={language}
                 />
               );
             })}
           </div>
         </Section>
 
-        <Section className="print:page-break-inside-avoid">
-          <h2 className="text-base font-bold border-b border-gray-300">
-            {language === 'ch' ? '工作经历' : 'Work Experience'}
-          </h2>
-          {data.work.map((work) => {
-            return (
-              <Card key={work.company}>
-                <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-sm">
-                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                      <a className="hover:underline" href={work.link}>
-                        {work.company}
-                      </a>
-
-                      <span className="inline-flex gap-x-1">
-                        {work.badges.map((badge) => (
-                          <Badge
-                            variant="secondary"
-                            className="align-middle text-xs"
-                            key={badge}
-                          >
-                            {badge}
-                          </Badge>
-                        ))}
-                      </span>
-                    </h3>
-                    <div className="text-xs tabular-nums text-gray-500">
-                      {work.start} - {work.end ?? "Present"}
+        {/* 仅在 data.work 存在且不为空时渲染整个 Section */}
+        {data.work && data.work.length > 0 && (
+          <Section className="print:page-break-inside-avoid">
+            <h2 className="text-base font-bold border-b border-gray-300">
+              {language === 'zh' ? '工作经历' : 'Work Experience'}
+            </h2>
+            {data.work.map((work) => {
+              return (
+                <Card key={work.company}>
+                  <CardHeader>
+                    <div className="flex items-center justify-between gap-x-2 text-sm">
+                      <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                        <a className="hover:underline" href={work.link}>
+                          {work.company}
+                        </a>
+                        <span className="inline-flex gap-x-1">
+                          {work.badges.map((badge) => (
+                            <Badge
+                              variant="secondary"
+                              className="align-middle text-xs"
+                              key={badge}
+                            >
+                              {badge}
+                            </Badge>
+                          ))}
+                        </span>
+                      </h3>
+                      <div className="text-xs tabular-nums text-gray-500">
+                        {work.start} - {work.end ?? "Present"}
+                      </div>
                     </div>
-                  </div>
 
-                  <h4 className="font-mono text-xs leading-none">
-                    {work.title}
-                  </h4>
-                </CardHeader>
-                <CardContent className="mt-1 text-xs">
-                  {work.description}
-                </CardContent>
-              </Card>
-            );
-          })}
-        </Section>
+                    <h4 className="font-mono text-xs leading-none">
+                      {work.title}
+                    </h4>
+                  </CardHeader>
+                  <CardContent className="mt-1 text-xs">
+                    {work.description}
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </Section>
+        )}
+
+        {/* 仅在 data.work 存在且不为空时渲染整个 Section */}
+        {data.internship && data.internship.length > 0 && (
+          <Section className="print:page-break-inside-avoid">
+            <h2 className="text-base font-bold border-b border-gray-300">
+              {language === 'zh' ? '实习经历' : 'Internship Experience'}
+            </h2>
+            {data.internship.map((internship) => {
+              return (
+                <Card key={internship.company}>
+                  <CardHeader>
+                    <div className="flex items-center justify-between gap-x-2 text-sm">
+                      <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                        <a className="hover:underline" href={internship.link}>
+                          {internship.company}
+                        </a>
+                        <span className="inline-flex gap-x-1">
+                          {internship.badges.map((badge) => (
+                            <Badge
+                              variant="secondary"
+                              className="align-middle text-xs"
+                              key={badge}
+                            >
+                              {badge}
+                            </Badge>
+                          ))}
+                        </span>
+                      </h3>
+                      <div className="text-xs tabular-nums text-gray-500">
+                        {internship.start} - {internship.end ?? "Present"}
+                      </div>
+                    </div>
+
+                    <h4 className="font-mono text-xs leading-none">
+                      {internship.title}
+                    </h4>
+                  </CardHeader>
+                  <CardContent className="mt-1 text-xs">
+                    {internship.description}
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </Section>
+        )}
+
 
 
         <Section>
           <h2 className="text-base font-bold border-b border-gray-300">
-            {language === 'ch' ? '在校经历' : 'Campus Activities'}
+            {language === 'zh' ? '在校经历' : 'Campus Activities'}
           </h2>
           {data.campusActivities.map((activity) => {
             return (

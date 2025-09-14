@@ -1,0 +1,30 @@
+/* ProjectCard.module.css */
+@media print {
+  .print-no-border {
+    border: none;
+  }
+
+  .print-tight {
+    padding: 0rem;
+    margin: 0;
+  }
+
+  .print-text-sm {
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+
+  .print-hidden {
+    display: none;
+  }
+
+  .print-description {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .tags-print {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+}
