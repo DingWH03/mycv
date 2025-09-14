@@ -17,7 +17,7 @@ import { CommandIcon } from "lucide-react";
 
 interface Props {
   links: { url: string; title: string }[];
-  language: string;
+  language: 'zh' | 'en';
 }
 
 export const CommandMenu = ({ links, language }: Props) => {
@@ -69,12 +69,12 @@ export const CommandMenu = ({ links, language }: Props) => {
             <CommandItem
               onSelect={() => {
                 setOpen(false);
-                const newLanguagePath = language === 'ch' ? '/en' : '/';
+                const newLanguagePath = language === 'zh' ? '/en' : '/';
                 router.push(newLanguagePath);
                 //handleToggleLanguage(); // 执行切换语言函数
               }}
             >
-              <span>Switch To {language === 'ch' ? 'English' : 'Chinese'}</span>
+              <span>Switch To {language === 'zh' ? 'English' : 'Chinese'}</span>
             </CommandItem>
           </CommandGroup>
           <CommandGroup heading="Links">

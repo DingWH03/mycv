@@ -3,7 +3,12 @@ import { RESUME_DATA_en } from "@/data/resume-data";
 import Page from '@/app/page-contents';
 
 // 定义语言标识变量，默认为 'en'
-let language = 'en';
+enum Language {
+  zh = 'zh',
+  en = 'en',
+}
+
+const language: Language = Language.en;
 
 // 组件的显示名称
 const enPage = () => <Page language={language} />;
