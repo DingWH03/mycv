@@ -192,8 +192,8 @@ export default function Page({ language }: PageProps) {
           <div className="mt-0 space-y-1">
             {data.skills.map((skillCategory, index) => (
               <div key={index}>
-                <h3 className="text-sm font-semibold">{skillCategory.category}</h3>
-                <ul className="list-disc list-inside text-sm font-light text-black space-y-1">
+                <h3 className="text-xs font-semibold">{skillCategory.category}</h3>
+                <ul className="list-disc list-inside text-xs font-light text-black space-y-0.5">
                   {skillCategory.items.map((skill, idx) => (
                     <li key={idx}>
                       {skill.name} {skill.level && `: ${skill.level}`}
@@ -206,7 +206,7 @@ export default function Page({ language }: PageProps) {
 
             {/* Certifications Section */}
             <div className="mt-0">
-              <h3 className="text-sm font-semibold">
+              <h3 className="text-xs font-semibold">
                 {language === 'zh' ? "证书" : "Certifications"}
               </h3>
               <div className="flex flex-wrap gap-2">
@@ -214,7 +214,7 @@ export default function Page({ language }: PageProps) {
                   <div key={index}>
                     <div className="flex flex-wrap gap-2">
                       <span
-                        className="px-2 py-1 text-sm font-medium text-black"
+                        className="px-2 py-1 text-xs font-medium text-black"
                         title={`${language === 'zh' ? "颁发机构：" : "Issuer:"} ${cert.issuer} (${cert.date})`}
                       >
                         {cert.name}
@@ -232,7 +232,7 @@ export default function Page({ language }: PageProps) {
           <h2 className="text-base font-bold border-b border-gray-300">
             {language === 'zh' ? '个人项目' : 'Personal Projects'}
           </h2>
-          <div className="-mx-3 grid grid-cols-1 gap-2 print:mx-0 print:gap-0 md:grid-cols-1 lg:grid-cols-1">
+          <div className="-mx-3 grid text-xs grid-cols-1 gap-2 print:mx-0 print:gap-0 md:grid-cols-1 lg:grid-cols-1">
             {data.projects.map((project, index) => {
               return (
                 <ProjectCard
@@ -241,6 +241,9 @@ export default function Page({ language }: PageProps) {
                   title={project.title}
                   description={project.description}
                   tags={project.techStack}
+                  personalGains={project.gains}
+                  mainTasks={project.tasks ? [...project.tasks] : undefined}
+                  achievements={project.achievements}
                   link={"link" in project ? project.link.href : undefined}
                   language={language}
                 />

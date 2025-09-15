@@ -38,7 +38,7 @@ export function ProjectCard({
       <CardHeader>
         <div className="space-y-2">
           {/* 项目标题和序号 */}
-          <CardTitle className="text-sm flex justify-between items-center">
+          <CardTitle className="text-xs flex justify-between items-center">
             <div className="mr-1 text-base">({order})</div>
             {link ? (
               <a
@@ -73,46 +73,52 @@ export function ProjectCard({
         </div>
       </CardHeader>
 
-      <CardDescription className="font-mono tags-print text-sm hidden print:block">
+      <CardDescription className="font-mono tags-print text-xs hidden print:block">
         {/* 打印时链接部分显示 */}
-        <p>{language === 'zh' ? '项目链接：' : 'Link:'} <a
-                href={link}
-                target="_blank"
-                className="inline-flex items-center gap-1 hover:underline"
-              >{link}</a></p>
+        <div>{language === 'zh' ? '项目链接：' : 'Link:'} <a
+          href={link}
+          target="_blank"
+          className="inline-flex items-center gap-1 hover:underline"
+        >{link}</a></div>
         {/* 打印时标签部分显示 */}
         <p>{language === 'zh' ? '应用技术：' : 'Tags:'} {tags.join("、")}</p>
       </CardDescription>
 
-      <CardContent className="mt-auto flex">
+      <CardContent className="mt-0 font-mono text-xs">
         {/* 项目描述 */}
-        {language === 'zh' ? '项目描述：' : 'Description:'} {description}
+        <div>{language === 'zh' ? '项目描述：' : 'Description:'} {description}</div>
+
         {/* 主要工作 */}
-        {mainTasks.length > 0 && (
-          <>
-            <div className="font-mono text-xs">
-              {language === 'zh' ? '主要工作：' : 'Tasks:'}
+        <div>
+          {mainTasks.length > 0 && (
+            <div className="font-mono flex items-start text-xs">
+              <div className="mt-0 mr-0 flex-shrink-0">
+                {language === 'zh' ? '主要工作：' : 'Tasks:'}
+              </div>
+              <ol className="list-decimal pl-5">
+                {renderMainTasks}
+              </ol>
             </div>
-            <ul className="font-mono text-xs list-disc pl-5">
-              {renderMainTasks}
-            </ul>
-          </>
-        )}
+          )}
+        </div>
 
         {/* 项目成果 */}
-        {achievements && (
-          <div className="font-mono text-xs mt-2">
+        <div>{achievements && (
+          <div className="font-mono text-xs mt-0">
             {language === 'zh' ? '项目成果：' : 'Achievements:'} {achievements}
           </div>
-        )}
+        )}</div>
 
         {/* 个人收获 */}
-        {personalGains && (
-          <div className="font-mono text-xs mt-2">
-            {language === 'zh' ? '个人收获：' : 'Gains:'} {personalGains}
-          </div>
-        )}
+        <div>
+          {personalGains && (
+            <div className="font-mono text-xs mt-0">
+              {language === 'zh' ? '个人收获：' : 'Gains:'} {personalGains}
+            </div>
+          )}
+        </div>
       </CardContent>
+
     </Card>
   );
 }
