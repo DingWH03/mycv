@@ -73,7 +73,7 @@ export function ProjectCard({
         </div>
       </CardHeader>
 
-      <CardDescription className="font-mono tags-print text-xs hidden print:block">
+      <CardDescription className="font-mono tags-print text-black text-xs hidden print:block">
         {/* 打印时链接部分显示 */}
         <div>{language === 'zh' ? '项目链接：' : 'Link:'} <a
           href={link}
@@ -84,7 +84,7 @@ export function ProjectCard({
         <p>{language === 'zh' ? '应用技术：' : 'Tags:'} {tags.join("、")}</p>
       </CardDescription>
 
-      <CardContent className="mt-0 font-mono text-xs">
+      <CardContent className="mt-0 text-black font-mono text-xs">
         {/* 项目描述 */}
         <div>{language === 'zh' ? '项目描述：' : 'Description:'} {description}</div>
 
