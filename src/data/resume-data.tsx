@@ -34,7 +34,7 @@ export const RESUME_DATA = {
     "合肥工业大学计算机科学与技术专业学生，擅长C++、Rust、Python和Java编程，熟悉Linux系统。参与过计算机图形学实验室项目，有深度学习研究经验。热爱编程，积极乐观，注重实践和动手能力的提升。",
   avatarUrl: "/images/avatar.jpg",
   personalWebsiteUrl: "https://me.cxhao.top",
-  target: "软件开发工程师",
+  target: "嵌入式软件开发工程师",
   contact: {
     email: "DingVero@outlook.com",
     tel: "+8615556183656",
