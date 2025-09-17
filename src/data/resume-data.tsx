@@ -102,30 +102,58 @@ export const RESUME_DATA = {
 
   skills: [
     {
-      category: "编程语言",
-      items: [
-        { name: "C/C++", level: "精通 C/C++，能独立开发高效的底层驱动与应用程序，熟悉 STL 标准库，掌握多线程与网络编程" },
-        { name: "Rust", level: "熟悉 Rust 核心概念，掌握 async/await 异步编程与并发模型，能使用 Rust 编写高性能系统级程序" },
-        { name: "汇编语言", level: "熟悉汇编语言，了解底层指令集与嵌入式系统启动流程" }
-      ]
+      name: "Linux基础",
+      level: "具备超过3年的Linux系统使用经验，精通Linux内核结构和驱动开发，曾成功移植mipi摄像头驱动并修改设备树配置。"
     },
     {
-      category: "开发",
-      items: [
-        { name: "操作系统", level: "精通 Linux 内核架构与驱动开发，能独立移植与调试 RTOS（如RT-Thread）至目标硬件平台" },
-        { name: "计算机网络", level: "熟悉 TCP/IP 协议栈，能独立实现网络应用程序，了解网络安全与加密技术，实现基于ip的通信技术" },
-        { name: "嵌入式系统", level: "精通嵌入式系统原理，能独立开发 RISC-V 与 ARM 裸机程序、Linux 系统或 RTOS 程序" },
-        { name: "硬件接口与通信协议", level: "熟悉 I²C、SPI、UART、CAN、USB、以太网（PHY 层）、SDIO 等常用接口协议。" },
-        { name: "调试工具", level: "精通 GDB、J-Link、OpenOCD 调试，熟练操作逻辑分析仪和示波器进行硬件调试" },
-        { name: "开发环境", level: "精通 GCC、Clang 交叉编译工具链，能独立配置开发环境，熟练使用 Makefile 和 CMake 构建项目" }
-      ]
+      name: "C/C++",
+      level: "精通C/C++编程，能够独立开发高效的底层驱动和应用程序，熟悉STL标准库，掌握多线程和网络编程技术。"
     },
+    {
+      name: "Rust",
+      level: "熟悉Rust语言核心概念，精通async/await异步编程与并发模型，能够使用Rust编写高性能的系统级程序。"
+    },
+    {
+      name: "汇编语言",
+      level: "精通RISC-V和ARM架构汇编语言，了解底层指令集，并熟悉嵌入式系统启动流程与硬件初始化。"
+    },
+    {
+      name: "计算机网络",
+      level: "深刻理解TCP/IP协议栈，能够独立开发网络应用程序，掌握网络安全与加密技术，熟悉基于IP的通信技术。"
+    },
+    {
+      name: "嵌入式系统",
+      level: "精通嵌入式系统原理，能够独立开发RISC-V和ARM架构的裸机程序、Linux系统或RTOS程序。"
+    },
+    {
+      name: "硬件接口与通信协议",
+      level: "熟悉I²C、SPI、UART、CAN、USB、以太网（PHY层）、SDIO等常用硬件接口协议，能够实现多种接口的通信。"
+    },
+    {
+      name: "调试工具",
+      level: "精通GDB、J-Link、OpenOCD调试工具，熟练使用逻辑分析仪和示波器进行硬件调试与故障排查。"
+    },
+    {
+      name: "开发环境",
+      level: "精通GCC、Clang交叉编译工具链，能够独立配置开发环境，熟练使用Makefile和CMake在Linux环境下构建项目。"
+    },
+    {
+      name: "Git版本控制",
+      level: "熟练使用Git进行版本管理，能够高效处理分支、合并、冲突解决和代码提交，熟悉Git Flow工作流。"
+    }
   ],
 
 
 
+
   certifications: [
-    { name: 'CET-6', issuer: 'Ministry of Education, PRC', date: '2023-12' },
+    {
+      name: 'CET-6',
+      description: "大学英语六级，成绩438分，具备较强的英语资料阅读与理解能力，能够流畅处理英文文献与技术资料。",
+      issuer: '中华人民共和国教育部',
+      date: '2023-12'
+    }
+
   ],
   projects: [
     {
@@ -261,29 +289,57 @@ export const RESUME_DATA_en = {
   ],
   skills: [
     {
-      category: "Programming Languages",
-      items: [
-        { name: "C/C++", level: "Proficient in C/C++, capable of independently developing efficient low-level drivers and applications, familiar with the STL standard library, and skilled in multithreading and network programming." },
-        { name: "Rust", level: "Familiar with core Rust concepts, adept in async/await asynchronous programming and concurrency models, able to develop high-performance system-level programs using Rust." },
-        { name: "Assembly Language", level: "Familiar with assembly language, understanding low-level instruction sets and embedded system boot processes." }
-      ]
+      name: "Linux Fundamentals",
+      level: "Over 3 years of experience using Linux systems, proficient in Linux kernel structure and driver development, with successful porting of MIPI camera drivers and modification of device tree configurations."
     },
     {
-      category: "Development",
-      items: [
-        { name: "Operating Systems", level: "Proficient in Linux kernel architecture and driver development, capable of independently porting and debugging RTOS (such as FreeRTOS, RT-Thread) on target hardware platforms." },
-        { name: "Computer Networks", level: "Familiar with TCP/IP protocol stack, capable of independently implementing network applications, understanding network security and encryption techniques, and developing IP-based communication technologies." },
-        { name: "Embedded Systems", level: "Proficient in embedded system principles, capable of independently developing RISC-V and ARM bare-metal programs, Linux-based systems, and RTOS-based applications." },
-        { name: "Hardware Interfaces and Communication Protocols", level: "Familiar with common interfaces such as I²C, SPI, UART, CAN, USB, Ethernet (PHY layer), and SDIO." },
-        { name: "Debugging Tools", level: "Proficient in using GDB, J-Link, and OpenOCD for debugging, skilled in operating logic analyzers and oscilloscopes for hardware debugging." },
-        { name: "Development Environment", level: "Proficient in using GCC and Clang cross-compilation toolchains, capable of independently configuring development environments, and familiar with building embedded projects using Makefile and CMake." }
-      ]
+      name: "C/C++",
+      level: "Proficient in C/C++ programming, capable of developing efficient low-level drivers and applications, familiar with STL standard library, and skilled in multithreading and network programming techniques."
+    },
+    {
+      name: "Rust",
+      level: "Familiar with Rust language core concepts, proficient in async/await asynchronous programming and concurrency models, capable of writing high-performance system-level programs using Rust."
+    },
+    {
+      name: "Assembly Language",
+      level: "Proficient in RISC-V and ARM assembly languages, with a deep understanding of low-level instruction sets, and familiar with embedded system startup processes and hardware initialization."
+    },
+    {
+      name: "Computer Networks",
+      level: "In-depth understanding of TCP/IP protocol stack, capable of independently developing network applications, proficient in network security and encryption technologies, and familiar with IP-based communication technologies."
+    },
+    {
+      name: "Embedded Systems",
+      level: "Proficient in embedded system principles, capable of independently developing bare-metal programs for RISC-V and ARM architectures, as well as Linux or RTOS-based programs."
+    },
+    {
+      name: "Hardware Interfaces & Communication Protocols",
+      level: "Familiar with common hardware interface protocols like I²C, SPI, UART, CAN, USB, Ethernet (PHY layer), SDIO, and capable of implementing communication for various interfaces."
+    },
+    {
+      name: "Debugging Tools",
+      level: "Proficient in debugging tools such as GDB, J-Link, and OpenOCD, skilled in using logic analyzers and oscilloscopes for hardware debugging and fault analysis."
+    },
+    {
+      name: "Development Environment",
+      level: "Proficient in using GCC and Clang cross-compilation toolchains, capable of independently configuring development environments, and skilled in using Makefile and CMake for project builds in Linux environments."
+    },
+    {
+      name: "Git Version Control",
+      level: "Proficient in using Git for version control, capable of managing branches, handling merges and conflict resolution, and familiar with Git Flow workflows."
     }
   ],
 
 
+
   certifications: [
-    { name: 'CET-6', issuer: 'Ministry of Education, PRC', date: '2023-12' },
+    {
+      name: 'CET-6',
+      description: "Scored 438 in the College English Test Band 6 (CET-6), with strong reading and comprehension skills in English, capable of handling academic and technical materials fluently.",
+      issuer: 'Ministry of Education, PRC',
+      date: 'December 2023'
+    }
+
   ],
   projects: [
     {

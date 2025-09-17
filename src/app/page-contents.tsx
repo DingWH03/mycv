@@ -149,7 +149,7 @@ export default function Page({ language }: PageProps) {
         </Section> */}
 
         <Section>
-          <h2 className="text-base font-bold border-b border-gray-300">
+          <h2 className="cv-title text-base font-bold border-b border-gray-600">
             {language === 'zh' ? '教育经历' : 'Education'}
           </h2>
           {data.education.map((edu) => (
@@ -173,7 +173,7 @@ export default function Page({ language }: PageProps) {
 
               {/* 第二行：描述 */}
               {edu.description && (
-                <CardContent className="mt-1 text-xs text-gray-600">
+                <CardContent className="mt-0 text-xs text-gray-800">
                   {edu.description}
                 </CardContent>
               )}
@@ -184,52 +184,32 @@ export default function Page({ language }: PageProps) {
 
 
 
+
+
         <Section>
-          <h2 className="text-base font-bold border-b border-gray-300">
-            {language === 'zh' ? "技能与证书" : "Skills and Certifications"}
+          <h2 className="cv-title text-base font-bold border-b border-gray-600 mt-0 mb-0">
+            {language === 'zh' ? "专业技能" : "Professional Skills"}
           </h2>
 
           <div className="mt-0 space-y-1">
-            {data.skills.map((skillCategory, index) => (
-              <div key={index}>
-                <h3 className="text-xs font-semibold">{skillCategory.category}</h3>
-                <ul className="list-disc list-inside text-xs font-light text-black space-y-0.5">
-                  {skillCategory.items.map((skill, idx) => (
-                    <li key={idx}>
-                      {skill.name} {skill.level && `: ${skill.level}`}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-
-
-            {/* Certifications Section */}
+            {/* 专业技能 Section */}
             <div className="mt-0">
-              <h3 className="text-xs font-semibold">
-                {language === 'zh' ? "证书" : "Certifications"}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {data.certifications.map((cert, index) => (
-                  <div key={index}>
-                    <div className="flex flex-wrap gap-2">
-                      <span
-                        className="px-2 py-1 text-xs font-medium text-black"
-                        title={`${language === 'zh' ? "颁发机构：" : "Issuer:"} ${cert.issuer} (${cert.date})`}
-                      >
-                        {cert.name}
-                      </span>
-                    </div>
-                  </div>
+              <ul className="list-disc list-inside text-xs font-light text-black space-y-0.5">
+                {data.skills.map((skill, idx) => (
+                  <li key={idx}>
+                    {skill.name} {skill.level && `: ${skill.level}`}
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </div>
+
         </Section>
+
 
         {/* 在这里控制打印时强制换行print-force-new-page */}
         <Section className="scroll-mb-16 print:page-break-inside-avoid">
-          <h2 className="text-base font-bold border-b border-gray-300">
+          <h2 className="cv-title text-base font-bold border-b border-gray-600">
             {language === 'zh' ? '个人项目' : 'Personal Projects'}
           </h2>
           <div className="-mx-3 grid text-xs grid-cols-1 gap-2 print:mx-0 print:gap-0 md:grid-cols-1 lg:grid-cols-1">
@@ -255,7 +235,7 @@ export default function Page({ language }: PageProps) {
         {/* 仅在 data.work 存在且不为空时渲染整个 Section */}
         {data.work && data.work.length > 0 && (
           <Section className="print:page-break-inside-avoid">
-            <h2 className="text-base font-bold border-b border-gray-300">
+            <h2 className="cv-title text-base font-bold border-b border-gray-600">
               {language === 'zh' ? '工作经历' : 'Work Experience'}
             </h2>
             {data.work.map((work) => {
@@ -263,7 +243,7 @@ export default function Page({ language }: PageProps) {
                 <Card key={work.company}>
                   <CardHeader>
                     <div className="flex items-center justify-between gap-x-2 text-sm">
-                      <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                      <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none experience-title">
                         <a className="hover:underline" href={work.link}>
                           {work.company}
                         </a>
@@ -279,7 +259,7 @@ export default function Page({ language }: PageProps) {
                           ))}
                         </span>
                       </h3>
-                      <div className="text-xs tabular-nums text-gray-500">
+                      <div className="text-xs tabular-nums text-gray-800">
                         {work.start} - {work.end ?? "Present"}
                       </div>
                     </div>
@@ -288,7 +268,7 @@ export default function Page({ language }: PageProps) {
                       {work.title}
                     </h4>
                   </CardHeader>
-                  <CardContent className="mt-1 text-xs">
+                  <CardContent className="mt-0 text-xs text-gray-800">
                     {work.description}
                   </CardContent>
                 </Card>
@@ -300,7 +280,7 @@ export default function Page({ language }: PageProps) {
         {/* 仅在 data.work 存在且不为空时渲染整个 Section */}
         {data.internship && data.internship.length > 0 && (
           <Section className="print:page-break-inside-avoid">
-            <h2 className="text-base font-bold border-b border-gray-300">
+            <h2 className="cv-title text-base font-bold border-b border-gray-600">
               {language === 'zh' ? '实习经历' : 'Internship Experience'}
             </h2>
             {data.internship.map((internship) => {
@@ -308,7 +288,7 @@ export default function Page({ language }: PageProps) {
                 <Card key={internship.company}>
                   <CardHeader>
                     <div className="flex items-center justify-between gap-x-2 text-sm">
-                      <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                      <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none experience-title">
                         <a className="hover:underline" href={internship.link}>
                           {internship.company}
                         </a>
@@ -324,16 +304,16 @@ export default function Page({ language }: PageProps) {
                           ))}
                         </span>
                       </h3>
-                      <div className="text-xs tabular-nums text-gray-500">
+                      <div className="text-xs tabular-nums text-gray-800">
                         {internship.start} - {internship.end ?? "Present"}
                       </div>
                     </div>
 
-                    <h4 className="font-mono text-xs leading-none">
+                    <h4 className="mb-0 mt-0 font-mono text-xs leading-none">
                       {internship.title}
                     </h4>
                   </CardHeader>
-                  <CardContent className="mt-1 text-xs">
+                  <CardContent className="mt-0 text-xs text-gray-800">
                     {internship.description}
                   </CardContent>
                 </Card>
@@ -342,10 +322,38 @@ export default function Page({ language }: PageProps) {
           </Section>
         )}
 
+        <Section>
+          <h2 className="cv-title text-base font-bold border-b border-gray-600 mt-0 mb-0">
+            {language === 'zh' ? "等级证书" : "Certifications"}
+          </h2>
 
+          <div className="mt-0 space-y-1">
+            {/* Certifications Section */}
+            <div className="mt-0">
+              <div className="flex flex-wrap gap-2">
+                {data.certifications.map((cert, index) => (
+                  <div key={index}>
+                    <div className="flex flex-wrap gap-1">
+                      <span
+                        className="px-2 py-0 text-xs font-medium text-black"
+                        title={`${language === 'zh' ? "颁发机构：" : "Issuer:"} ${cert.issuer} (${cert.date})`}
+                      >
+                        {cert.name}
+                      </span>
+                      {/* 添加证书的描述信息 */}
+                      {cert.description && (
+                        <span className="text-xs text-black">{cert.description}</span>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Section>
 
         <Section>
-          <h2 className="text-base font-bold border-b border-gray-300">
+          <h2 className="cv-title text-base font-bold border-b border-gray-600 mb-2">
             {language === 'zh' ? '在校经历' : 'Campus Activities'}
           </h2>
           {data.campusActivities.map((activity) => {
@@ -353,26 +361,28 @@ export default function Page({ language }: PageProps) {
               <Card key={activity.organization}>
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-sm">
-                    <h3 className="font-semibold leading-none">
-                      {activity.organization}
-                    </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
+                    <h3 className="font-semibold leading-none experience-title">{activity.organization}</h3>
+                    <div className="text-sm tabular-nums text-black">
                       {activity.start} - {activity.end}
                     </div>
                   </div>
-                  <h4 className="font-mono text-xs leading-none">{activity.position}</h4>
-                  {activity.department && (
-                    <h5 className="text-xs leading-none text-gray-500">{activity.department}</h5>
-                  )}
-                  {activity.topic && (
-                    <h5 className="text-xs leading-none text-gray-500">{activity.topic}</h5>
-                  )}
+                  {/* 将 department、position 和 topic 放在同一行 */}
+                  <div className="flex gap-x-2 mt-1">
+                    <h4 className="font-mono text-xs leading-none">{activity.position}</h4>
+                    {activity.department && (
+                      <h5 className="text-xs leading-none text-black">{activity.department}</h5>
+                    )}
+                    {activity.topic && (
+                      <h5 className="text-xs leading-none text-black">{activity.topic}</h5>
+                    )}
+                  </div>
                 </CardHeader>
-                <CardContent className="mt-1 text-xs">{activity.description}</CardContent>
+                <CardContent className="mt-0 text-xs text-gray-800">{activity.description}</CardContent>
               </Card>
             );
           })}
         </Section>
+
       </section>
 
 

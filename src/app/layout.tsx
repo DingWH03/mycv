@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ch" className={inter.className}>
+    <html lang="zh" className={inter.className}>
       <body>{children}</body>
       <Analytics />
     </html>

@@ -70,14 +70,18 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
     font-family: "SimSun", "宋体", serif;
   }
+
   .font-mono {
     font-family: "SimSun", "宋体", serif !important;
   }
+
   @media print {
+
     .card-content,
     .overflow-auto {
       overflow: visible !important;
@@ -93,6 +97,7 @@
     ::-webkit-scrollbar {
       display: none;
     }
+
     html,
     body {
       scrollbar-width: none;
@@ -102,4 +107,20 @@
 
 .print-force-new-page {
   page-break-before: always;
+}
+
+.cv-title {
+  /* 标题到上方的间距 */
+  margin-top: -6px;
+  /* 标题到下方的间距 */
+  margin-bottom: -12px;
+
+}
+
+.experience-title {
+  /* 标题到上方的间距 */
+  margin-top: -6px;
+  /* 标题到下方的间距 */
+  margin-bottom: -12px;
+
 }
